@@ -1,0 +1,358 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{circuitikz}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{tikz-qtree}
+\usepackage{tikzscale}
+\usepackage{tikz-qtree}
+\usepackage{tikzscale}
+\usepackage{pgffor}
+\usepackage{tikz-qtree}
+\usetikzlibrary{circuits.logic.IEC, calc}
+
+\author{Adrian Lozada}
+\title{Module 3 Assignment 2}
+\date{March 4, 2023}
+
+\begin{document}
+    \maketitle
+    \newpage
+    \section{Problem 1}
+    \begin{flushleft}
+        Write the Booleean function implemented in Canonical Sum of Products format
+        and in Canonical Product of Sums format.
+    \end{flushleft}
+    \begin{align*}
+        &\sum m(2, 4, 5) = \bar{x}y\bar{z} + x\bar{y}\bar{z} + x\bar{y}z \\
+        &\prod M(0, 1, 3, 6, 7) = (x + y + z)(x + y + \bar{z})(x + \bar{y} + \bar{z})(\bar{x} + \bar{y} + z)(\bar{x} + \bar{y} + \bar{z})
+    \end{align*}
+    \section{Problem 2}
+    \begin{flushleft}
+        Write a simplified Boolean function for the function performed by the circuit below.
+    \end{flushleft}
+    \begin{align*}
+        &= \bar{C}\bar{D}\bar{A} + CD\bar{A} + A
+    \end{align*}
+    \section{Problem 3}
+    \begin{flushleft}
+        Write a truth table for the outputs,then use Boolean identities to find the simplified
+        Boolean function for the outputs $S_a$ and $S_b$.
+    \end{flushleft}
+    \begin{center}
+            \begin{tabular}{|c|c|c|c|c|c|c|c|}
+                \hline
+                $Inputs$ & $a$ & $b$ & $c$ & $d$ & $e$ & $f$ & $g$ \\
+                \hline
+                0000 & 1 & 1 & 1 & 1 & 1 & 1 & 0 \\
+                0001 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\
+                0010 & 1 & 1 & 0 & 1 & 1 & 0 & 1 \\
+                0011 & 1 & 1 & 1 & 1 & 0 & 0 & 1 \\
+                0100 & 0 & 1 & 1 & 0 & 0 & 1 & 1 \\
+                0101 & 1 & 0 & 1 & 1 & 0 & 1 & 1 \\
+                0110 & 1 & 0 & 1 & 1 & 1 & 1 & 1 \\
+                0111 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+                1000 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+                1001 & 1 & 1 & 1 & 0 & 0 & 1 & 1 \\
+                1010 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                1011 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                1100 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                1101 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                1110 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                1111 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                \hline
+            \end{tabular}
+    \end{center}
+    \newpage
+    \begin{align*}
+        S_a := \sum m(0, 2, 3, 5, 6, 7, 8, 9) &= \bar{w}\bar{x}\bar{y}\bar{z} + \bar{w}\bar{x}y\bar{z} + \bar{w}\bar{x}yz + \bar{w}x\bar{y}z + \bar{w}xy\bar{z} + \bar{w}xyz + w\bar{x}\bar{y}\bar{z} + w\bar{x}\bar{y}z\\
+        &= \bar{w}(\bar{x}\bar{y}\bar{z} + \bar{x}y\bar{z} + \bar{x}yz + x\bar{y}z + xy\bar{z} + xyz) + w(\bar{x}\bar{y}\bar{z} + \bar{x}\bar{y}z)\\
+        &= \bar{w}(\bar{x}(\bar{y}\bar{z} + y\bar{z} + yz) + x(\bar{y}z + y\bar{z} + yz)) + w(\bar{x}\bar{y})\\
+        &= \bar{w}(\bar{x}(\bar{z} + y) + x(z + y)) + w\bar{x}\bar{y}\\
+        &= \bar{w}(\bar{x}y + \bar{x}\bar{z} + xy + xz) + w\bar{x}\bar{y}\\ 
+        &= \bar{w}(y + \bar{x}\bar{z} + xz) + w\bar{x}\bar{y}\\
+        &= \bar{w}xz + \bar{w}\bar{x}\bar{z} +  \bar{w}y + w\bar{x}\bar{y}\\ 
+        S_b := \sum m(0, 1, 2, 3, 4, 7, 8, 9) &= \bar{w}\bar{x}\bar{y}\bar{z} + \bar{w}\bar{x}\bar{y}z + \bar{w}\bar{x}y\bar{z} + \bar{w}\bar{x}yz + \bar{w}x\bar{y}\bar{z} + \bar{w}xyz + w\bar{x}\bar{y}\bar{z} + w\bar{x}\bar{y}z\\
+        &= \bar{w}(\bar{x}(\bar{y}\bar{z} + \bar{y}z + y\bar{z} + yz) + x\bar{y}\bar{z} + xyz) + w\bar{x}\bar{y} \\
+        &= \bar{w}(\bar{x} + x\bar{y}\bar{z} + xyz) + w\bar{x}\bar{y} \\
+        &= \bar{w}\bar{x} + \bar{w}x\bar{y}\bar{z} + \bar{w}xyz + w\bar{x}\bar{y}\\
+        &= \bar{w}(\bar{x} + \bar{y}\bar{z} + yz) + w\bar{x}\bar{y}\\
+        &= \bar{w}\bar{x} + w\bar{x}\bar{y}+ \bar{w}yz + \bar{w}\bar{y}\bar{z} \\
+    \end{align*}
+
+    \newpage
+    \section{Problem 4}
+    \begin{flushleft}
+        Using a $4\times16$ decoder module and a an OR gate to implement the Boolean function $f(a, b, c, d) = ab\bar{c} + acd$
+    \end{flushleft}
+    \begin{align*}
+        \sum m(11, 12 , 13, 15)
+    \end{align*}
+    % Design for circuit:
+    \begin{circuitikz}[circuit logic IEC]
+        \node[and gate, inputs={nnnn}, and gate IEC symbol={Decoder 4:8}, text height=6cm, text width=4cm] (A) {};
+
+        \foreach \V/\X in {1/A, 2/B, 3/C, 4/D}
+        {
+            \draw ([xshift=-.5cm]A.input \V) node[left] {$\X$} -- (A.input \V);
+        }
+
+        \def\range{1, ..., 16}
+
+        \foreach \I in \range
+        {
+             {\draw ($ (A.north east)!\I * .0589!(A.south east) $) -- ++ (0cm, 0) node[left, xshift=0cm] (Num\I) {$Y\I$};}
+        }
+        
+        \draw (5, -1) node[or port, fill=gray] (OR1) {$OR_1$};
+        \draw (5, -2.2) node[or port, fill=gray] (OR2) {$OR_2$};
+        \draw (7, -1.5) node[or port, fill=gray] (OR3) {$OR_3$};
+        
+        \draw (Num11.east) to[short] (OR1.in 1)
+            (Num12.east) to[short] (OR1.in 2);
+        \draw (Num13.east) to[short] (OR2.in 1)
+            (Num15.east) to[short] (OR2.in 2);
+        \draw (OR1.out) to[short] (OR3.in 1)
+            (OR2.out) to[short] (OR3.in 2);
+        \draw (OR3.out) to[short, -*, label=$F$] ++(.2, 0);
+    \end{circuitikz}
+
+    \newpage
+    \section{Problem 5}
+    \begin{flushleft}
+        Using an $8\times1$ multiplexer module and a OR gate to implement the Boolean function $f(a, b, c) = b + a\bar{c}$
+    \end{flushleft}
+    \begin{align*}
+        \sum m(2, 3, 4, 6, 7)
+    \end{align*}
+    \begin{circuitikz}[circuit logic IEC]
+        \node [or gate, inputs={ssssssss}, or gate IEC symbol={Multiplexer 8:1}, text height=6cm, text width=4cm] (M) {};
+        
+        \foreach \Y/\H in {1/A, 2/B, 3/C}
+        {
+            \draw ($(M.south west)!\Y*.25!(M.south east)$) to[short] ++(0, -1) node[below] {$\H$};
+        }
+        \foreach \T/\P in {1/0, 2/1, 3/2, 4/3, 5/4, 6/5, 7/6, 8/7}
+        {
+            \draw ([xshift=-.5cm]M.input \T) node[left] {$\P$} -- (M.input \T);
+        }
+        
+        \draw 
+            (-2.5, 3.3) node[above] {$+$}
+            (M.input 3) -- ++ (-.41,0) to[short, *-] (-2.5, 3.5)
+            (M.input 4) -- ++ (-.41,0) to[short, *-] (-2.5, 3.5)
+            (M.input 5) -- ++ (-.41,0) to[short, *-] (-2.5, 3.5)
+            (M.input 7) -- ++ (-.41,0) to[short, *-] (-2.5, 3.5)
+            (M.input 8) -- ++ (-.41,0) to[short, *-] (-2.5, 3.5);
+        
+        \draw 
+            (-2.3, -3.3) node[below, color=red] {$-$}
+            (M.input 1) -- ++ (-.2,0) to[short, o-, color=blue, fill=red] (-2.3, -3.55)
+            (M.input 2) -- ++ (-.2,0) to[short, o-, color=blue, fill=red] (-2.3, -3.55)
+            (M.input 6) -- ++ (-.2,0) to[short, o-,  color=blue, fill=red] (-2.3, -3.55);
+
+        \draw (M.output) to[short, -o, label=$F$] ++(1, 0);
+
+    \end{circuitikz}
+
+    \section{Problem 6}
+    \text{Write Boolean functions for the circuit below in Canonical Sum of Product form.}
+    \begin{align*}
+        &Y: \sum m (1, 3, 5, 7, 9, 10, 11, 13, 15) =\\ 
+        &=\bar{A}\bar{B}\bar{C}D + \bar{A}\bar{B}CD + \bar{A}B\bar{C}D + \bar{A}BCD + A\bar{B}\bar{C}D + A\bar{B}C\bar{D} + A\bar{B}CD + AB\bar{C}D + ABCD \\ \\
+        &Z: \sum m(5, 7, 9, 13, 15) =\\
+        &= \bar{A}B\bar{C}D + \bar{A}BCD + A\bar{B}\bar{C}D + AB\bar{C}D + ABCD \\
+    \end{align*}
+
+    \newpage
+    \section{Problem 7}
+    \text{Simplify the Boolean functions from problem 6 and sketch the improved circuit with the same function.}
+    \begin{align*}
+        &Y: \sum m (1, 3, 5, 7, 9, 10, 11, 13, 15) =\\ 
+        &=\bar{A}\bar{B}\bar{C}D + \bar{A}\bar{B}CD + \bar{A}B\bar{C}D + \bar{A}BCD + A\bar{B}\bar{C}D + A\bar{B}C\bar{D} + A\bar{B}CD + AB\bar{C}D + ABCD \\
+        &= \bar{A}(\bar{B}\bar{C}D + \bar{B}CD + B\bar{C}D + BCD) + A(\bar{B}\bar{C}D + \bar{B}C\bar{D} + \bar{B}CD + B\bar{C}D + BCD) \\
+        &= \bar{A}(\bar{B}D(1) + BD(1)) + A(\bar{B}D(1) +\bar{B}C\bar{D} + B\bar{C}D + BCD) \\
+        &= \bar{A}(D) + A(D(\bar{B} + BC) + \bar{B}C\bar{D} + B\bar{C}D) \\
+        &= \bar{A}D + A(D(\bar{B} + C) + \bar{B}C\bar{D} + B\bar{C}D) \\
+        &= \bar{A}D + A(\bar{B}D + CD + \bar{B}C\bar{D} + B\bar{C}D) \\
+        &=\bar{A}D + A(C(D + \bar{B}\bar{D})+ \bar{B}D + B\bar{C}D) \\
+        &= \bar{A}D + A(C(D + \bar{B}) + \bar{B}D + B\bar{C}D) \\
+        &= \bar{A}D + A(CD + \bar{B}C + \bar{B}D + B\bar{C}D) \\
+        &= \bar{A}D+ ACD + A\bar{B}C + A\bar{B}D + AB\bar{C}D \\
+        &= D(\bar{A} + AC) + A\bar{B}C + AD(\bar{B} + B\bar{C}) \\
+        &= D(\bar{A} + C) + A\bar{B}C + AD(\bar{B} + \bar{C}) \\
+        &= \bar{A}D + CD + A\bar{B}C + AD\bar{B} + AD\bar{C} \\
+        &= D(\bar{A} + A\bar{C}) + A\bar{B}C + A\bar{B}D + CD\\
+        &= D(\bar{A} + \bar{C}) + A\bar{B}C + A\bar{B}D + CD\\
+        &= \bar{A}D + \bar{C}D + A\bar{B}C + A\bar{B}D + CD\\
+        &= D(\bar{A} + A\bar{B}) + \bar{C}D + A\bar{B}C + CD\\
+        &= D(\bar{A} + \bar{B}) + \bar{C}D + A\bar{B}C + CD\\
+        &= \bar{A}D + \bar{B}D + \bar{C}D + A\bar{B}C + CD\\
+        &= D(1) + \bar{B}D + \bar{A}D + A\bar{B}C \\
+        &= D(1 + \bar{B}) + \bar{A}D + A\bar{B}C \\
+        &= D + \bar{A}D + A\bar{B}C \\
+        &= D(1 + \bar{A}) + A\bar{B}C \\
+        &= D + A\bar{B}C
+    \end{align*}
+
+    \newpage
+    \begin{align*}
+        &Z: \sum m(5, 7, 9, 13, 15) =\\
+        &= \bar{A}B\bar{C}D + \bar{A}BCD + A\bar{B}\bar{C}D + AB\bar{C}D + ABCD \\
+        &= B(\bar{A}\bar{C}D + \bar{A}CD + A\bar{C}D + ACD) + A\bar{B}\bar{C}D \\
+        &= B(CD(A + \bar{A}) + D\bar{C}(A + \bar{A})) + A\bar{B}\bar{C}D \\
+        &= B(CD + \bar{C}D) + A\bar{B}\bar{C}D \\
+        &= B(D(C + \bar{C})) + A\bar{B}\bar{C}D \\
+        &= BD + A\bar{B}\bar{C}D \\
+        &= D(B + A\bar{B}\bar{C}) \\
+        &= D(B + A\bar{C}) \\
+        &= BD + A\bar{C}D \\
+    \end{align*}
+
+    \begin{flushleft}
+        Circuit for Y:
+    \end{flushleft}
+    \begin{circuitikz}
+        \draw
+        (3.6, -1.5 -5) node[and port, scale=.8] (and2) {AND}
+        (2.3, -.5-5) node[and port, scale=.8] (and) {AND}
+        (6, -3-5) node[or port] (or) {OR}
+
+            (or.out)
+            to[short, -o, label=$Y$]
+            (7, -3-5)
+
+            (and2.out)
+            |-
+            (or.in 1)
+
+            (and.out)
+            |-
+            (and2.in 1)
+
+        (0,0-5)  node[label=left:$A$] (A) {}
+            -- 
+            (1, 0-5) 
+            |- 
+            (and.in 1)
+
+        (0, -1-5) node[label=left:$B$] (B) {}
+            -- 
+            (.3, -1-5)
+
+        node[not port, scale=.5, anchor=in] (not) {NOT} 
+            (not.out)
+            |- 
+            (and.in 2)
+
+        (0, -2-5) node[label=left:$C$] (C) {}
+            --
+            (.1, -2-5)
+            |-
+            (and2.in 2)
+
+        (0, -3-5) node[label=left:$D$] (D) {}
+            --
+            (.2, -3-5)
+            |-
+            (or.in 2);
+
+    \end{circuitikz}
+    
+    \begin{flushleft}
+        Circuit for Z:
+    \end{flushleft}
+    \begin{circuitikz}
+        \draw
+        (2.5, -2) node[and port, scale=.8] (and) {AND}
+        (2.5, -1) node[and port, scale=.8] (and2) {AND}
+        (4.3, -1) node[and port, scale=.8] (and3) {AND}
+        (6, -2.5) node[or port] (or) {OR}
+        (2, -3) node[not port, scale=.5, anchor=in] (not) {NOT}
+
+        (0, 0) node[label=left:$A$] (a) {}
+        (0, -1) node[label=left:$B$] (b) {}
+        (0, -2) node[label=left:$C$] (c) {}
+        (0, -3) node[label=left:$D$] (d) {}
+            
+            (a)
+            --
+            (.2, 0)
+            |-
+            (and2.in 1)
+        
+            (b)
+            --
+            (.2, -1)
+            |-
+            (and.in 1)
+
+            (d)
+            --
+            (.2, -3)
+            |-
+            (and.in 2)
+
+            (d)
+            --
+            (.4, -3)
+            |-
+            (and2.in 2)
+
+            (and2.out)
+            |-
+            (and3.in 1)
+
+            (c)
+            --
+            (1, -2)
+            --
+            (1, -3)
+            --
+            (not.in)
+
+            (not.out)
+            |-
+            (and3.in 2)
+
+            (and3.out)
+            |-
+            (or.in 1)
+
+            (and.out)
+            --
+            (3, -2)
+            |-
+            (or.in 2)
+
+            (or.out)
+            to[short, label=$Z$, -o]
+            (7 ,-2.5);
+    \end{circuitikz}
+
+    \newpage
+    \section{Problem 8}
+    \begin{flushleft}
+        Complete the truth table for the following sequential circuit.
+    \end{flushleft}
+
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            $X$ & $Q_A(t)$ & $Q_B(t)$ & $Q_A(t+1)$ & $Q_B(t+1)$ \\
+            \hline
+            0 & 0 & 0 & 1 & 1 \\
+            0 & 0 & 1 & 0 & 1 \\
+            0 & 1 & 0 & 1 & 0 \\
+            0 & 1 & 1 & 1 & 0 \\
+            1 & 0 & 0 & 0 & 1 \\
+            1 & 0 & 1 & 1 & 1 \\
+            1 & 1 & 0 & 1 & 0 \\
+            1 & 1 & 1 & 0 & 0 \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+\end{document}

@@ -1,0 +1,222 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+% The file is the solution of the fourth assignment of the course of computer organization.
+\author{Adrian Lozada}
+\title{Assignment 4}
+
+\begin{document}
+    \maketitle
+    \newpage
+    \section{Exercise 1}
+    \begin{flushleft}
+        Construct truth tables for the following XOR and XNOR gates.
+    \end{flushleft}
+    \begin{flushleft}
+        a. XOR gate for a, b, c and d.:
+    \end{flushleft}
+    % Table for XOR gate:
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            a & b & c & d & XOR(a,b,c,d) \\
+            \hline
+            0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 1 \\
+            0 & 0 & 1 & 0 & 1 \\
+            0 & 0 & 1 & 1 & 0 \\
+            0 & 1 & 0 & 0 & 1 \\
+            0 & 1 & 0 & 1 & 0 \\
+            0 & 1 & 1 & 0 & 0 \\
+            0 & 1 & 1 & 1 & 1 \\
+            1 & 0 & 0 & 0 & 1 \\
+            1 & 0 & 0 & 1 & 0 \\
+            1 & 0 & 1 & 0 & 0 \\
+            1 & 0 & 1 & 1 & 1 \\
+            1 & 1 & 0 & 0 & 0 \\
+            1 & 1 & 0 & 1 & 1 \\
+            1 & 1 & 1 & 0 & 1 \\
+            1 & 1 & 1 & 1 & 0 \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \begin{flushleft}
+        b. XNOR gate for a, b, c and d.:
+    \end{flushleft}
+    % Table for XNOR gate for a, b, and c:
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            a & b & c & XNOR(a,b,c) \\
+            \hline
+            0 & 0 & 0 & 1 \\
+            0 & 0 & 1 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 1 & 1 & 1 \\
+            1 & 0 & 0 & 0 \\
+            1 & 0 & 1 & 1 \\
+            1 & 1 & 0 & 1 \\
+            1 & 1 & 1 & 0 \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    % Question 2:
+    \newpage
+    \section{Exercise 2}
+    \begin{flushleft}
+        Write the Boolean expression in Canonical Sum of Products and Canonical Product of Sums for the following truth table:
+    \end{flushleft}
+    % Canonical Sum of Products:
+    \begin{align*}
+        &\sum m \left(0, 1, 3, 4, 7 \right) = \left(\bar{x}\bar{y}\bar{z} + \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}\bar{z} + xyz\right) \\
+        &\prod M \left(2, 5, 6 \right) = \left(x+\bar{y}+z)(\bar{x}+y+\bar{z})(\bar{x}+\bar{y}+z\right)
+    \end{align*}
+    % Simplified Canonical Sum of Products and Canonical Product of Sums:
+    \section{Exercise 3}
+    \begin{flushleft}
+        Use Boolean Identities to simplify the Canonical sum-of-product Boolean function
+        obtained in problem 2.
+    \end{flushleft}
+    % Simplified Canonical Sum of Products:
+    \begin{align*}
+        &\sum m \left(0, 1, 3, 4, 7 \right) = \left(\bar{x}\bar{y}\bar{z} + \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}\bar{z} + xyz\right) \\
+        &= \bar{y}(\bar{x}\bar{z} + \bar{x}z + x\bar{z}) + y(\bar{x}z + xz) \\
+        &= \bar{y}(\bar{x}(\bar{z}+ z) + x\bar{z}) + y(z(\bar{x} + x)) \\
+        &= \bar{y}(\bar{x} + x\bar{z}) + yz \\
+        &= \bar{x}\bar{y} + x\bar{y}\bar{z} + yz \\
+        &= \bar{y}(\bar{x} + x\bar{z}) + yz \\
+        &= \bar{y}(\bar{x} + \bar{z}) + yz \\
+        &= \bar{x}\bar{y} + \bar{y}\bar{z} + yz \\
+    \end{align*}
+    \section{Exercise 4}
+    \begin{flushleft}
+        Write the Boolean expression in Canonical sum-of-products and Canonical
+        product-of-sum forms for the following truth table.
+    \end{flushleft}
+    % Canonical Sum of Products:
+    \begin{align*}
+        &\sum m(0, 1, 3, 4, 7, 8, 12, 13) = \left(\bar{w}\bar{x}\bar{y}\bar{z} + \bar{w}\bar{x}\bar{y}z +
+        \bar{w}\bar{x}yz + \bar{w}x\bar{y}\bar{z} + \bar{w}xyz + w\bar{x}\bar{y}\bar{z} + wx\bar{y}\bar{z} + wx\bar{y}z\right) \\
+    \end{align*}
+    % Canonical Product of Sums:
+    \begin{align*}
+        \prod M(2, 5, 6, 9, 10, 11, 14, 15) = &(w+x+\bar{y}+z) (w+\bar{x}+y+\bar{z})(w+\bar{x}+\bar{y}+z) \\
+        &(\bar{w}+x+y+\bar{z})(\bar{w}+x+\bar{y}+z)(\bar{w}+x+\bar{y}+\bar{z}) \\
+        &(\bar{w}+\bar{x}+\bar{y}+z)(\bar{w}+\bar{x}+\bar{y}+\bar{z})
+    \end{align*}
+    \newpage
+    \section{Exercise 5}
+    \begin{flushleft}
+        Use Boolean identities to simplify the Canonical sum-of-product Boolean function
+        obtained in problem 4.
+    \end{flushleft}
+    % Simplified Canonical Sum of Products:
+    \begin{align*}
+        &\sum m(0, 1, 3, 4, 7, 8, 12, 13) = \left(\bar{w}\bar{x}\bar{y}\bar{z} + \bar{w}\bar{x}\bar{y}z +
+        \bar{w}\bar{x}yz + \bar{w}x\bar{y}\bar{z} + \bar{w}xyz + w\bar{x}\bar{y}\bar{z} + wx\bar{y}\bar{z} + wx\bar{y}z\right) \\
+        &= \bar{w}(\bar{x}\bar{y}\bar{z} + \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}\bar{z} + xyz) + w(\bar{x}\bar{y}\bar{z} + x\bar{y}\bar{z} + x\bar{y}z) \\
+        &= \bar{w}(\bar{x}\bar{y}(\bar{z} + z) + \bar{x}yz + x\bar{y}\bar{z} + xyz) + w(\bar{x}\bar{y}\bar{z} + x\bar{y}\bar{z} + x\bar{y}z) \\
+        &= \bar{w}(\bar{x}\bar{y} + y(\bar{x}z + xz) + x\bar{y}\bar{z}) + w(\bar{y}\bar{z}(\bar{x} + x) + x\bar{y}z) \\
+        &= \bar{w}(\bar{x}\bar{y} + y(z(\bar{x} + x)) + x\bar{y}\bar{z}) + w(\bar{y}\bar{z} + x\bar{y}z) \\
+        &= \bar{w}(\bar{x}\bar{y} + yz+ x\bar{y}\bar{z}) + w(\bar{y}\bar{z} + x\bar{y}z) \\
+        &= \bar{w}(\bar{y}(\bar{x} + x\bar{z}) + yz) + w(\bar{y}(\bar{z} + xz)) \\
+        &= \bar{w}(\bar{y}(\bar{x} + \bar{z}) + yz) + w(\bar{y}(\bar{z} + x)) \\
+        &= \bar{w}(\bar{x}\bar{y} + \bar{y}\bar{z} + yz) + w(\bar{y}\bar{z} + x\bar{y}) \\
+        &= \bar{w}\bar{x}\bar{y}+ \bar{w}\bar{y}\bar{z} + \bar{w}yz + w\bar{y}\bar{z} + wx\bar{y} \\
+        &= \bar{w}\bar{x}\bar{y} + \bar{y}\bar{z}(\bar{w} + w) + wx\bar{y} + \bar{w}yz \\
+        &= \bar{w}\bar{x}\bar{y} + \bar{y}\bar{z} + wx\bar{y} + \bar{w}yz \\
+    \end{align*}
+
+    % Problem 6
+    \section{Exercise 6}
+    \begin{flushleft}
+        Find CSOP and CPOS forms for the following function:
+    \end{flushleft}
+    \begin{flushleft}
+        a. $F(a, b, c) = ab + \bar{a}c$
+    \end{flushleft}
+    \begin{align*}
+        &\sum m(1, 3, 6, 7)  &= ab + \bar{a}c \\
+        &\prod M(0, 2, 4, 5) &= ab + \bar{a}c \\
+    \end{align*}   
+    \begin{flushleft}
+        b. $F(A, B, C, D) = A(\bar{B} + C\bar{D}) + \bar{A}B\bar{C}D$
+    \end{flushleft}
+    \begin{align*}
+        &\sum m(5, 8, 9, 10, 11, 14) &= A(\bar{B} + C\bar{D}) + \bar{A}B\bar{C}D \\
+        &\prod M(0, 1, 2, 3, 4, 6, 7, 12, 13, 15) &= A(\bar{B} + C\bar{D}) + \bar{A}B\bar{C}D
+    \end{align*}
+
+    % Problem 7
+    \newpage
+    \section{Exercise 7}
+    \begin{flushleft}
+        Use Boolean Identities to simplify the following Boolean functions:
+    \end{flushleft}
+    \begin{flushleft}
+        a. $xy\bar{z} + x\bar{y}\bar{z} + \bar{x}yz + \bar{x}\bar{y}\bar{z} + xyz$
+    \end{flushleft}
+    \begin{align*}
+        &= x(y\bar{z} + \bar{y}\bar{z} + yz) + \bar{x}(yz + \bar{y}\bar{z}) \\
+        &= x(y(\bar{z} + z) + \bar{y}\bar{z}) + \bar{x}(yz + \bar{y}\bar{z}) \\
+        &= x(y + \bar{y}\bar{z}) + \bar{x}(yz + \bar{y}\bar{z}) \\
+        &= x(\overline{(y\bar{y} + \bar{y}z)}) + \bar{x}(yz + \bar{y}\bar{z}) \\
+        &= x(y  + \bar{z}) + \bar{x}yz + \bar{x}\bar{y}\bar{z} \\
+        &= xy + x\bar{z} + \bar{x}yz + \bar{x}\bar{y}\bar{z} \\
+        &= \bar{z}(x + \bar{x}\bar{y}) + y(x + \bar{x}z) \\
+        &= \bar{z}(\overline{(\bar{x}x + \bar{x}y)}) + y(\overline{(\bar{x}x + \bar{x}\bar{z})}) \\
+        &= \bar{z}(x + \bar{y}) + y(x + z) \\
+        &= x\bar{z} + \bar{z}\bar{y} + xy + yz \\
+        &= x\bar{z} + \bar{z}\bar{y} + yz
+    \end{align*}
+    \begin{flushleft}
+        b. $wx\bar{y}z + wxy\bar{z} + wx\bar{y}\bar{z} + w\bar{x}yz + w\bar{x}\bar{y}z + w\bar{x}\bar{y}\bar{z} + \bar{w}x\bar{y}z + \bar{w}\bar{x}yz + \bar{w}\bar{x}y\bar{z}$
+    \end{flushleft}
+    \begin{align*}
+        &= w(x\bar{y}z + xy\bar{z} + x\bar{y}\bar{z} + \bar{x}yz + \bar{x}\bar{y}z + \bar{x}\bar{y}\bar{z}) + \bar{w}(x\bar{y}z + \bar{x}yz + \bar{x}y\bar{z}) \\
+        &= w(x(\bar{y}z + y\bar{z} + \bar{y}\bar{z}) + \bar{x}(yz + \bar{y}z + \bar{y}\bar{z})) + \bar{w}(x\bar{y}z + \bar{x}(yz + y\bar{z})) \\
+        &= w(x(y\bar{z} + \bar{y}(z + \bar{z})) + \bar{x}(yz + \bar{y}(z + \bar{z}))) + \bar{w}(x\bar{y}z + \bar{x}(y(z + \bar{z}))) \\
+        &= w(x(y\bar{z} + \bar{y}) + \bar{x}(yz + \bar{y})) + \bar{w}(x\bar{y}z + \bar{x}y) \\
+        &= w(x\overline{(yz + y\bar{y})} + \bar{x}\overline{(y\bar{z} + y\bar{y})}) + \bar{w}x\bar{y}z + \bar{w}\bar{x}y \\
+        &= w(x(\bar{y} + \bar{z}) + \bar{x}(\bar{y} + z)) + \bar{w}x\bar{y}z + \bar{w}\bar{x}y \\ 
+        &= w(x\bar{y} + x\bar{z} + \bar{x}\bar{y} + \bar{x}z) + \bar{w}x\bar{y}z + \bar{w}\bar{x}y \\
+        &= wx\bar{y} + wx\bar{z} + w\bar{x}\bar{y} + w\bar{x}z + \bar{w}x\bar{y}z + \bar{w}\bar{x}y \\       
+        &= \bar{y}(wx + w\bar{x}) + wx\bar{z} + w\bar{x}z + \bar{w}x\bar{y}z + \bar{w}\bar{x}y \\
+        &= \bar{y}(w(x + \bar{x})) + wx\bar{z} + w\bar{x}z + \bar{w}x\bar{y}z + \bar{w}\bar{x}y \\
+        &= \bar{y}w + wx\bar{z} + w\bar{x}z + \bar{w}x\bar{y}z + \bar{w}\bar{x}y \\
+        &= \bar{y}(w + \bar{w}xz) + wx\bar{z} + w\bar{x}z + \bar{w}\bar{x}y \\
+        &= \bar{y}\overline{(\bar{w}w + \bar{w}\bar{x} + \bar{w}\bar{z})} + wx\bar{z} + w\bar{x}z + \bar{w}\bar{x}y \\
+        &= \bar{y}(w + xz) + wx\bar{z} + w\bar{x}z + \bar{w}\bar{x}y \\
+        &= w\bar{y} + x\bar{y}z + w\bar{x}z + \bar{w}\bar{x}y + wx\bar{z}
+    \end{align*}
+
+    \newpage
+    \begin{flushleft}
+        c. $\bar{w}\bar{x}\bar{y} + \bar{w}xz + wxz + w\bar{x}\bar{y}\bar{z}$
+    \end{flushleft}
+    \begin{align*}
+        &= \bar{x}(\bar{w}\bar{y} + w\bar{y}\bar{z}) + x(\bar{w}z + wz) \qquad (Distribution) \\
+        &= \bar{x}(\bar{y}(\bar{w} + w\bar{z})) + x(z(\bar{w} + w)) \qquad (Distribution) \\
+        &= \bar{x}(\bar{y}(\bar{w} + \bar{z})) + x(z) \qquad (Inverse \quad and \quad Absorption)\\
+        &= \bar{x}(\bar{y}\bar{w} + \bar{y}\bar{z}) + xz \qquad (Distribution) \\
+        &= \bar{x}\bar{y}\bar{w} + \bar{x}\bar{y}\bar{z} + xz \qquad (Distribution) \\
+    \end{align*}
+    \begin{flushleft}
+        d. $\left(X + Y + Z + \bar{W}\right)\left(V + X\right)\left( \bar{V} + Y + Z + \bar{W}\right)$
+    \end{flushleft}
+    \begin{align*}
+        &Let \quad S = Y + Z + \bar{W} \\
+        &= \left(X + S\right)\left(V + X\right)\left(\bar{V} + S\right) \qquad (Distribution) \\
+        &= \left(X + \left(VS\right)\right)\left( \bar{V} + S\right) \qquad (Distribution \quad and \quad Absorption) \\
+        &= X\bar{V} + XS + VS \qquad (Distribution) \\
+        &= X\bar{V} + X\left(Y + Z + \bar{W}\right) + V\left(Y + Z + \bar{W}\right) \qquad (Distribution) \\
+        &= X\bar{V} + XY + XZ + X\bar{W} + VY + VZ +V\bar{W} \qquad (Distribution) \\
+        &= X\bar{V} + XZ + X\bar{W} + YV + ZV + \bar{W}V \qquad (Consensus) \\
+        &= X\bar{V} + YV + ZV + \bar{W}V \qquad (Consensus) \\
+    \end{align*}
+
+\end{document}

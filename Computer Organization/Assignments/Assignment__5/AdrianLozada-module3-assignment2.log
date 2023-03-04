@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  3 MAR 2023 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  4 MAR 2023 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -496,36 +496,36 @@ Missing character: There is no 8 in font nullfont!
 Missing character: There is no : in font nullfont!
 Missing character: There is no 1 in font nullfont!
 
-Overfull \hbox (10.75072pt too wide) in paragraph at lines 161--162
+Overfull \hbox (10.75072pt too wide) in paragraph at lines 162--163
 [] 
  []
 
 
-Overfull \hbox (54.16663pt too wide) detected at line 167
+Overfull \hbox (54.16663pt too wide) detected at line 168
 []
  []
 
 [5]
-Overfull \hbox (109.58424pt too wide) in paragraph at lines 171--172
+Overfull \hbox (109.58424pt too wide) in paragraph at lines 172--173
 [] 
  []
 
 
-Overfull \hbox (54.16663pt too wide) detected at line 198
+Overfull \hbox (54.16663pt too wide) detected at line 199
 []
  []
 
 [6] [7] [8] (./AdrianLozada-module3-assignment2.aux) ) 
 Here is how much of TeX's memory you used:
- 31037 strings out of 478268
- 798655 string characters out of 5846347
- 1297515 words of memory out of 5000000
- 48879 multiletter control sequences out of 15000+600000
+ 31034 strings out of 478268
+ 798608 string characters out of 5846347
+ 1297519 words of memory out of 5000000
+ 48876 multiletter control sequences out of 15000+600000
  476507 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,9n,118p,622b,860s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on AdrianLozada-module3-assignment2.pdf (8 pages, 118242 bytes).
+Output written on AdrianLozada-module3-assignment2.pdf (8 pages, 118246 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream

@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinelanguage{RISCV}{
+  morekeywords={add, addi, addiw, addw, and, andi, auipc, beq, bge, bgeu, blt, bltu, bne, div, divu, divuw, divw, ecall, eret, fence, fence_i, jal, jalr, lb, lbu, ld, lh, lhu, lui, lw, lwu, mul, mulh, mulhsu, mulhu, mulw, or, ori, rem, remu, remuw, remw, ret, sb, sd, sh, sll, slli, slliw, sllw, slt, slti, sltiu, sltu, sra, srai, sraiw, sraw, srl, srli, srliw, srlw, sub, subw, sw, xor, xori},
+  morecomment=[l]{\#},
+  morecomment=[s]{/*}{*/},
+  morekeywords=[2]{x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20, x21, x22, x23, x24, x25, x26, x27, x28, x29, x30, x31},
+  morekeywords=[3]{a0, a1, a2, a3, a4, a5, a6, a7},
+  morekeywords=[4]{t0, t1, t2, t3, t4, t5, t6},
+  morekeywords=[5]{s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11},
+  keywordstyle=\color{brown}, % Can you give me a color that looks similar to python's keywords?  ,
+  keywordstyle=[2]\color{purple},
+  keywordstyle=[3]\color{orange},
+  keywordstyle=[4]\color{blue},
+  keywordstyle=[5]\color{red},
+}
+
+
+\lstset{
+  language=RISCV,
+  basicstyle=\ttfamily,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green},
+  numbers=left,
+  numberstyle=\tiny,
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2
+}
+
+\title{Assignment 6, Part A}
+\author{Adrian Lozada}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+% Problem 1
+\section{}
+Independent
+
+% Problem 2
+\section{}
+\begin{flushleft}
+The NOR instruction is not part of the RISC-V instruction set because the same 
+functionality can be implemented using existing instructions. Write a short assembly code 
+snippet that has the following functionality: s3 = s4 NOR s5. Use as few instructions as 
+possible.
+\end{flushleft}
+\begin{lstlisting}[language=RISCV]
+    or s3, s4, s5 # s3 = s4 OR s5
+    xori s3, s3, -1 # s3 = s3 XOR -1
+\end{lstlisting}
+    
+
+\section{Problem 2: Problem Title}
+\subsection{Problem Description}
+Provide a description of the problem, including any relevant background information or context.
+
+\subsection{Solution}
+Present your RISC-V code solution for this problem, along with any necessary explanations or justifications.
+
+\begin{verbatim}
+; RISC-V code for Problem 2
+...
+\end{verbatim}
+
+\section{Conclusion}
+Summarize your findings and any insights you gained while working on the assignment.
+
+\end{document}

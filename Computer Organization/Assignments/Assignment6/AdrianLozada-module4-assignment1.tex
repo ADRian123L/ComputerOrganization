@@ -48,36 +48,51 @@
 \newpage
 
 % Problem 1
-\section{}
-Independent
+    \section{Group}
+    Independent
 
 % Problem 2
-\section{}
-\begin{flushleft}
-The NOR instruction is not part of the RISC-V instruction set because the same 
-functionality can be implemented using existing instructions. Write a short assembly code 
-snippet that has the following functionality: s3 = s4 NOR s5. Use as few instructions as 
-possible.
-\end{flushleft}
-\begin{lstlisting}[language=RISCV]
-    or s3, s4, s5 # s3 = s4 OR s5
-    xori s3, s3, -1 # s3 = s3 XOR -1
-\end{lstlisting}
+\section{Code Snippet}
+    \begin{flushleft}
+        The NOR instruction is not part of the RISC-V instruction set because the same 
+        functionality can be implemented using existing instructions. Write a short assembly code 
+        snippet that has the following functionality: s3 = s4 NOR s5. Use as few instructions as 
+        possible.
+    \end{flushleft}
+    \begin{lstlisting}[language=RISCV]
+        or s3, s4, s5 # s3 = s4 OR s5
+        xori s3, s3, -1 # s3 = s3 XOR -1
+    \end{lstlisting}
     
+% Problem 3
+    \section{Code Snippet 2}
+    \begin{flushleft}
+        Write RISC-V assembly code for placing the following immediate constants in register s7.
+        Use a minimum number of instructions.
+    \end{flushleft}
+    % a:
+    \text{a)}
+    \begin{lstlisting}[language=RISCV]
+        addi s7, x0, 59 # s7 = 59
+    \end{lstlisting}
+    \text{b)}
+    \begin{lstlisting}[language=RISCV]
+        addi s7, x0, -199 # s7 = -199
+    \end{lstlisting}
+    \text{c)}
+    \begin{lstlisting}[language=RISCV]
+        lui s7, 0xDDCBE289 # s7 = 0xDDCBE000
+        andi t0, 0xDDCBE289, 4095 # t0 = 0x00000289
+        add s7, s7, t0 # s7 = 0xDDCBE289
+    \end{lstlisting}
+    \text{d)}
+    \begin{lstlisting}[language=RISCV]
+        lui s7, 0x11236BDF # s7 = 0x11236000
+        andi t0, 0x11236BDF, 4095 # t0 = 0x00000BDF
+        add s7, s7, t0 # s7 = 0x11236BDF
+    \end{lstlisting}
 
-\section{Problem 2: Problem Title}
-\subsection{Problem Description}
-Provide a description of the problem, including any relevant background information or context.
 
-\subsection{Solution}
-Present your RISC-V code solution for this problem, along with any necessary explanations or justifications.
 
-\begin{verbatim}
-; RISC-V code for Problem 2
-...
-\end{verbatim}
-
-\section{Conclusion}
-Summarize your findings and any insights you gained while working on the assignment.
 
 \end{document}

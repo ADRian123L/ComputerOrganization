@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  18 MAR 2023 23:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  18 MAR 2023 23:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -371,21 +371,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./AdrianLozada-module4-assignment1.aux)
 Package rerunfilecheck Info: File `AdrianLozada-module4-assignment1.out' has not changed.
-(rerunfilecheck)             Checksum: B1AA6DEE1A5E1C055D80A7957E249024;587.
+(rerunfilecheck)             Checksum: B3F3633040E12BCD5A4B91C0E7712972;293.
  ) 
 Here is how much of TeX's memory you used:
- 12047 strings out of 478268
- 181521 string characters out of 5846347
- 489820 words of memory out of 5000000
- 30117 multiletter control sequences out of 15000+600000
- 473838 words of font info for 46 fonts, out of 8000000 for 9000
+ 12054 strings out of 478268
+ 181616 string characters out of 5846347
+ 539817 words of memory out of 5000000
+ 30115 multiletter control sequences out of 15000+600000
+ 473531 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,6n,63p,540b,1307s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on AdrianLozada-module4-assignment1.pdf (2 pages, 59256 bytes).
+Output written on AdrianLozada-module4-assignment1.pdf (2 pages, 58037 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 74 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

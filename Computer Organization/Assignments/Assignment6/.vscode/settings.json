@@ -1,0 +1,10 @@
+{
+    "cSpell.enableFiletypes": [
+        "riscv"
+    ],
+    "cSpell.words": [
+        "addi",
+        "ecall",
+        "globl"
+    ]
+}

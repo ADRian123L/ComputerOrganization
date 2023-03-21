@@ -8,6 +8,8 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{color}
+\usepackage{minted}
 
 \lstdefinelanguage{RISCV}{
   morekeywords={add, addi, addiw, addw, and, andi, auipc, beq, bge, bgeu, blt, bltu, bne, div, divu, divuw, divw, ecall, eret, fence, fence_i, jal, jalr, lb, lbu, ld, lh, lhu, lui, lw, lwu, mul, mulh, mulhsu, mulhu, mulw, or, ori, rem, remu, remuw, remw, ret, sb, sd, sh, sll, slli, slliw, sllw, slt, slti, sltiu, sltu, sra, srai, sraiw, sraw, srl, srli, srliw, srlw, sub, subw, sw, xor, xori},
@@ -75,16 +77,19 @@
     \begin{lstlisting}[language=RISCV]
         addi s7, x0, 59 # s7 = 59
     \end{lstlisting}
+    % b:
     \text{b)}
     \begin{lstlisting}[language=RISCV]
         addi s7, x0, -199 # s7 = -199
     \end{lstlisting}
+    % c:
     \text{c)}
     \begin{lstlisting}[language=RISCV]
         lui s7, 0xDDCBE289 # s7 = 0xDDCBE000
         andi t0, 0xDDCBE289, 4095 # t0 = 0x00000289
         add s7, s7, t0 # s7 = 0xDDCBE289
     \end{lstlisting}
+    % d:
     \text{d)}
     \begin{lstlisting}[language=RISCV]
         lui s7, 0x11236BDF # s7 = 0x11236000

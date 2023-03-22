@@ -1,4 +1,3 @@
-#
 #    Purpose: The program implements the solutions for finding the maximum and minimum 
 #    values in an array.
 #    Author: Adrian Lozada
@@ -42,4 +41,5 @@ main:
         lw t4, 0(a0) # Load the next value of the array into t4
         j for # Go to the for loop
         end:
+        # End of the function
         ecall

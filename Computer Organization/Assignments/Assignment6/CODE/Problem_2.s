@@ -11,12 +11,11 @@ main:
     addi x21, x0, 12 # s5 = 0
     addi x5, x0, -1 # t0 = -1
 
-/*  The answer to question number two.*/
+# The answer to question number two.
     # s3 = s4 NOR s5
     or s3, s4, s5 # s3 = s4 OR s5
     xor s3, s3, x5 # s3 = s3 XOR -1
     add x0, x0, x0
 
-    # End
-    addi a7, x0, 93
+    # End of program
     ecall

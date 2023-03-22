@@ -8,28 +8,29 @@
 .text
 main:
     # Problem a:
-    # The snippet of code loads the first and third element of the arr array,
-    # it adds them together, and stores the sum as the second element of the array
-    # arr.
-    lw t0, 0(a0) # Loads the first element (3) of array arr into t0.
-    lw t1, 8(a0) # Loads the third element (4) of array arr into t1.
-    add t2, t0, t1  # Adds the two elements and stores the sum (7) in t2.
-    sw t2, 4(a0) # Stores the sum in the second element of array arr.
-    
+
+    # This code snippet loads the first and third elements of the 'arr' array, 
+    # adds them together, and stores the sum in the second element of the array.
+        
+    lw t0, 0(a0)    # Load the first element (3) of the 'arr' array into register t0.
+    lw t1, 8(a0)    # Load the third element (4) of the 'arr' array into register t1.
+    add t2, t0, t1  # Add the values in registers t0 and t1, storing the sum (7) in register t2.
+    sw t2, 4(a0)    # Store the sum (value in t2) in the second element of the 'arr' array.
+
     # Problem b:
-    # The snippet of code implements a loop. The loop iterates six times 
-    # (the number of elements in the array), and uses t0 as an iteration counter.
-    # Furthermore, the snippet of code uses t4 as a pointer to the address of each 
-    # element in the array arr. At every iteration the snippet of code multiplies 
-    # each element of the array arr by negative one.
-    add t0, x0, x0 # Sets t0 to 0.
-loop: slti t1, t0, 6 # Sets t1 to 1 if t0 is less than 6, otherwise sets it to 0.
-    beq t1, x0, end # Branches to the label end if t1 equals 0.
-    slli t2, t0, 2 # Shifts t0 logically left by 2 bits and puts the result in t2.
-    add t3, a0, t2 # Adds t3 and a0 and puts the result in t3.
-    lw t4, 0(t3) # Loads the word value stores at address of t3 into t4.
-    sub t4, x0, t4 # Subtracts t4 from x0 (negates t4) and puts the result in t4.
-    sw t4, 0(t3) # Stores the word value of t4 at the address of t3.
-    addi t0, t0, 1 # Increments t0 by 1.
-    j loop # Jumps to the label loop.
+
+    # This code snippet implements a loop that iterates six times (the number of elements in the 'arr' array). 
+    # During each iteration, it negates the value of the current element in the array.
+
+    add t0, x0, x0       # Initialize t0 (loop counter) to 0.
+loop:
+    slti t1, t0, 6       # Set t1 to 1 if t0 is less than 6 (number of iterations), otherwise set it to 0.
+    beq t1, x0, end      # If t1 equals 0 (t0 is not less than 6), branch to the label 'end'.
+    slli t2, t0, 2       # Multiply t0 by 4 (bitwise left shift by 2) and store the result in t2 (element offset).
+    add t3, a0, t2       # Calculate the address of the current element by adding a0 (base address of 'arr') and t2, store it in t3.
+    lw t4, 0(t3)         # Load the value of the current element in the 'arr' array into t4.
+    sub t4, x0, t4       # Negate the value of t4 (multiply by -1) by subtracting it from x0 (which is 0), and store the result in t4.
+    sw t4, 0(t3)         # Store the negated value of t4 back into the current element of the 'arr' array.
+    addi t0, t0, 1       # Increment the loop counter (t0) by 1.
+    j loop               # Jump to the label 'loop' to continue iterating.
 end:

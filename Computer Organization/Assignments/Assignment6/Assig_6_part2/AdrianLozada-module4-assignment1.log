@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  22 MAR 2023 22:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  22 MAR 2023 21:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment6/AdrianLozada-module4-assignment1.tex"
-(/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment6/AdrianLozada-module4-assignment1.tex
+**"/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment6/Assig_6_part2/AdrianLozada-module4-assignment1.tex"
+(/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment6/Assig_6_part2/AdrianLozada-module4-assignment1.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -381,7 +381,7 @@ runsystem(mkdir -p _minted-AdrianLozada-module4-assignment1)...disabled (restric
 
 
 
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment6/AdrianLozada-module4-assignment1.tex:13: Package minted Error: You must invoke LaTeX with the -shell-escape flag.
+/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment6/Assig_6_part2/AdrianLozada-module4-assignment1.tex:13: Package minted Error: You must invoke LaTeX with the -shell-escape flag.
 
 See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -394,13 +394,13 @@ Pass the -shell-escape flag to LaTeX. Refer to the minted.sty documentation for 
 runsystem(which pygmentize && touch AdrianLozada-module4-assignment1.aex)...disabled (restricted).
 
 
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment6/AdrianLozada-module4-assignment1.tex:49: Package minted Error: You must have `pygmentize' installed to use this package.
+/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment6/Assig_6_part2/AdrianLozada-module4-assignment1.tex:47: Package minted Error: You must have `pygmentize' installed to use this package.
 
 See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.49 \begin{document}
+l.47 \begin{document}
                      
 Refer to the installation instructions in the minted documentation for more information.
 
@@ -411,24 +411,24 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 ) (./AdrianLozada-module4-assignment1.aux)
 \openout1 = `AdrianLozada-module4-assignment1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count324
@@ -482,7 +482,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 47.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -492,9 +492,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count330
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
 \@outlinefile=\write5
 \openout5 = `AdrianLozada-module4-assignment1.out'.
 
@@ -502,20 +502,16 @@ LaTeX Info: Redefining \nameref on input line 49.
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
 \c@lstlisting=\count331
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 215.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmtt.fd
-File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [6] [7] [8] (./AdrianLozada-module4-assignment1.aux)
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./AdrianLozada-module4-assignment1.aux)
 
 Package rerunfilecheck Warning: File `AdrianLozada-module4-assignment1.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
@@ -523,21 +519,21 @@ Package rerunfilecheck Warning: File `AdrianLozada-module4-assignment1.out' has 
 
 Package rerunfilecheck Info: Checksums for `AdrianLozada-module4-assignment1.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  DD0620FBA92EF627658CEDE8E29CE826;769.
+(rerunfilecheck)             After:  678607AABCEA553B865F08C16707BA8C;76.
  ) 
 Here is how much of TeX's memory you used:
- 15488 strings out of 478268
- 253910 string characters out of 5846347
- 812854 words of memory out of 5000000
- 33341 multiletter control sequences out of 15000+600000
- 473828 words of font info for 46 fonts, out of 8000000 for 9000
+ 14898 strings out of 478268
+ 247864 string characters out of 5846347
+ 583847 words of memory out of 5000000
+ 32918 multiletter control sequences out of 15000+600000
+ 473061 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,6n,67p,540b,1915s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on AdrianLozada-module4-assignment1.pdf (8 pages, 103562 bytes).
+ 61i,6n,67p,554b,351s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on AdrianLozada-module4-assignment1.pdf (2 pages, 31873 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
- 165 named destinations out of 1000 (max. 500000)
+ 33 PDF objects out of 1000 (max. 8388607)
+ 22 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

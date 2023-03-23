@@ -39,7 +39,7 @@ main:
         addi t2, t2, 1 # Increment the counter
         addi a0, a0, 4 # Increment the address of the array
         lw t4, 0(a0) # Load the next value of the array into t4
-        j for # Go to the for loop
+        jal x0, for # Go to the for loop
         end:
         # End of the function
         ecall

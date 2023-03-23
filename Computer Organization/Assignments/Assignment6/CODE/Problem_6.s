@@ -20,7 +20,7 @@ main:
     # Problem b:
 
     # This code snippet implements a loop that iterates six times (the number of elements in the 'arr' array). 
-    # During each iteration, it negates the value of the current element in the array.
+    # During each iteration, it negates the value of the current element in the array.x
 
     add t0, x0, x0       # Initialize t0 (loop counter) to 0.
 loop:

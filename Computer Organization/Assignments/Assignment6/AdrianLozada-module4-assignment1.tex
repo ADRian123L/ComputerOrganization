@@ -64,7 +64,7 @@
         possible.
     \end{flushleft}
     \begin{lstlisting}[language=RISCV]
-        or s3, s4, s5 # s3 = s4 OR s5
+        or s3, s4, s5 # s3 = s4 OR s5 
         xori s3, s3, -1 # s3 = s3 XOR -1
     \end{lstlisting}
     
@@ -87,16 +87,16 @@
     % c:
     \text{c)}
     \begin{lstlisting}[language=RISCV]
-        lui s7, 0xDDCBE289 # s7 = 0xDDCBE000
-        andi t0, 0xDDCBE289, 4095 # t0 = 0x00000289
-        add s7, s7, t0 # s7 = 0xDDCBE289
+        lui s7, 0xDDCBE # Load the upper 20 bits of the immediate into s7
+        addi s7, s7, 0x289 # Add the lower 12 bits of the immediate to s7
     \end{lstlisting}
     % d:
     \text{d)}
     \begin{lstlisting}[language=RISCV]
-        lui s7, 0x11236BDF # s7 = 0x11236000
-        andi t0, 0x11236BDF, 4095 # t0 = 0x00000BDF
-        add s7, s7, t0 # s7 = 0x11236BDF
+        lui s7, 0x11236 # Load the upper 20 bits of the immediate into s7
+        lui s6, 0xBDF # Load the upper 20 bits of the immediate into s6
+        srli s5, s6, 12 # Shift s6 right by 12 bits
+        add s7, s7, s5 # Add s5 to s7
     \end{lstlisting}
 
     \newpage
@@ -146,8 +146,8 @@
     \section{Code Snippet 4}
     \begin{flushleft}
         Convert the following high-level code into RISC-V assembly language. Assume
-that the signed integer variables g and h are in registers t0 and t1, respectively. You can
-use other temporary registers like t2 and t3 if needed.
+        that the signed integer variables g and h are in registers t0 and t1, respectively. You can
+        use other temporary registers like t2 and t3 if needed.
     \end{flushleft}
     \text{a)}
     \begin{lstlisting}[language=RISCV]

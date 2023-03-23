@@ -131,7 +131,7 @@
         srai t3, t0, 5 # g = g / 32
         slli t3, t3, 5 # g = g * g
         sub t0, t0, t3 # g = g - g * g
-        jal a0, end2
+        jal x0, end2
     else2:
         slli t2, t1, 1 # h = h * 2
         add t1, t1, t2 # h = h * 3

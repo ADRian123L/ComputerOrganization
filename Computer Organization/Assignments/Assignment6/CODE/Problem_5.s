@@ -20,13 +20,13 @@ main:
         beq t3, t2, true # if t3 is equal to 3, go to true
         addi t2, zero, 5 # set t2 to 5
         beq t3, t2, true # if t3 is equal to 5, go to true
-        jal x0, else
+        jal else
     true:
         slli t2, t1, 2 # multiply t1 by 4
         srai t3, t1, 1 # divide t2 by 4
         add t3, t3, t2 # add t3 and t2
         add t1, t1, t3 # add t1 and t3
-        jal x0, end
+        jal end
     else:
         srai t3, t1, 4 # divide t1 by 16
         slli t3, t3, 4 # multiply t3 by 16
@@ -52,7 +52,7 @@ main:
         srai t3, t1, 3 # divide t1 by 8
         slli t3, t3, 3 # multiply t3 by 8
         sub t1, t1, t3 # subtract t3 from t1
-        jal x0, end2
+        jal end2
     else2:
         slli t2, t1, 3 # multiply t1 by 8
         srai t1, t1, 1  # divide t1 by 2

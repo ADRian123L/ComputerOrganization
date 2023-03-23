@@ -32,5 +32,5 @@ loop:
     sub t4, x0, t4       # Negate the value of t4 (multiply by -1) by subtracting it from x0 (which is 0), and store the result in t4.
     sw t4, 0(t3)         # Store the negated value of t4 back into the current element of the 'arr' array.
     addi t0, t0, 1       # Increment the loop counter (t0) by 1.
-    j loop               # Jump to the label 'loop' to continue iterating.
+    jal loop               # Jump to the label 'loop' to continue iterating.
 end:

@@ -20,7 +20,7 @@ main:
         sll t3, t0, t2 # g * 2
         sra t0, t0, t2 # g / 2
         add t0, t0, t3 # g = g * 2 + g / 2
-        jal x0, end
+        jal end
     else:
         addi t1, t1, -6 # g = g - 6
         srai t1, t1, 4 # g = g / 16
@@ -37,7 +37,7 @@ main:
         srai t3, t0, 5 # g = g / 32
         slli t3, t3, 5 # g = g * g
         sub t0, t0, t3 # g = g - g * g
-        jal x0, end2
+        jal end2
     else2:
         slli t2, t1, 1 # h = h * 2
         add t1, t1, t2 # h = h * 3

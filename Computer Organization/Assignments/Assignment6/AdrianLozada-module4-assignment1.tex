@@ -116,7 +116,7 @@
         sll t3, t0, t2 # g * 2
         sra t0, t0, t2 # g / 2
         add t0, t0, t3 # g = g * 2 + g / 2
-        jal x0, end
+        jal end
     else:
         addi t1, t1, -6 # g = g - 6
         srai t1, t1, 4 # g = g / 16
@@ -131,7 +131,7 @@
         srai t3, t0, 5 # g = g / 32
         slli t3, t3, 5 # g = g * g
         sub t0, t0, t3 # g = g - g * g
-        jal x0, end2
+        jal end2
     else2:
         slli t2, t1, 1 # h = h * 2
         add t1, t1, t2 # h = h * 3
@@ -159,13 +159,13 @@
             beq t3, t2, true # if t3 is equal to 3, go to true
             addi t2, zero, 5 # set t2 to 5
             beq t3, t2, true # if t3 is equal to 5, go to true
-            jal x0, else
+            jal else
         true:
             slli t2, t1, 2 # multiply t1 by 4
             srai t3, t1, 1 # divide t2 by 4
             add t3, t3, t2 # add t3 and t2
             add t1, t1, t3 # add t1 and t3
-            jal x0, end
+            jal end
         else:
             srai t3, t1, 4 # divide t1 by 16
             slli t3, t3, 4 # multiply t3 by 16
@@ -190,7 +190,7 @@
         srai t3, t1, 3 # divide t1 by 8
         slli t3, t3, 3 # multiply t3 by 8
         sub t1, t1, t3 # subtract t3 from t1
-        jal x0, end2
+        jal end2
     else2:
         slli t2, t1, 3 # multiply t1 by 8
         srai t1, t1, 1  # divide t1 by 2
@@ -239,7 +239,7 @@
         srai t3, t1, 3 # divide t1 by 8
         slli t3, t3, 3 # multiply t3 by 8
         sub t1, t1, t3 # subtract t3 from t1
-        jal x0, end2
+        jal end2
     else2:
         slli t2, t1, 3 # multiply t1 by 8
         srai t1, t1, 1  # divide t1 by 2
@@ -283,7 +283,7 @@
         addi t2, t2, 1 # Increment the counter
         addi a0, a0, 4 # Increment the address of the array
         lw t4, 0(a0) # Load the next value of the array into t4
-        jal x0, for # Go to the for loop
+        jal for # Go to the for loop
     end:
     \end{lstlisting}
 

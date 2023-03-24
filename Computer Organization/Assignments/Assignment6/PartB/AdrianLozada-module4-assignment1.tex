@@ -1,0 +1,256 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{minted}
+
+\lstdefinelanguage{RISCV}{
+  morekeywords={add, addi, addiw, addw, and, andi, auipc, beq, bge, bgeu, blt, bltu, bne, div, divu, divuw, divw, ecall, eret, fence, fence_i, jal, jalr, lb, lbu, ld, lh, lhu, lui, lw, lwu, mul, mulh, mulhsu, mulhu, mulw, or, ori, rem, remu, remuw, remw, ret, sb, sd, sh, sll, slli, slliw, sllw, slt, slti, sltiu, sltu, sra, srai, sraiw, sraw, srl, srli, srliw, srlw, sub, subw, sw, xor, xori},
+  morecomment=[l]{\#},
+  morecomment=[s]{/*}{*/},
+  morekeywords=[2]{x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20, x21, x22, x23, x24, x25, x26, x27, x28, x29, x30, x31},
+  morekeywords=[3]{a0, a1, a2, a3, a4, a5, a6, a7},
+  morekeywords=[4]{t0, t1, t2, t3, t4, t5, t6},
+  morekeywords=[5]{s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11},
+  keywordstyle=\color{cyan}, 
+  keywordstyle=[2]\color{yellow},
+  keywordstyle=[3]\color{orange},
+  keywordstyle=[4]\color{red},
+  keywordstyle=[5]\color{red},
+}
+
+\lstset{
+  language=RISCV,
+  basicstyle=\ttfamily\color{white},
+  keywordstyle=\color{cyan},
+  commentstyle=\color{green},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2,
+  backgroundcolor=\color[HTML]{1e1e1e}, % Dark background color
+  rulecolor=\color{gray},
+  numbersep=8pt,
+}
+
+\title{Assignment 6, Part A}
+\author{Adrian Lozada}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+% Problem 1
+    \section{Group}
+    Independent
+
+% Problem 2
+\section{Code Snippet}
+    \begin{flushleft}
+        The NAND instruction is not part of the RISC-V instruction set because the same
+        functionality can be implemented using existing instructions. Write a short assembly code
+        snippet that has the following functionality: s3 = s4 NAND s5. Use as few instructions as
+        possible.
+    \end{flushleft}
+    \begin{lstlisting}[language=RISCV]
+        and s3, s4, s5 # s3 = s4 & s5
+        xori s3, s3, -1 # s3 = ~s3
+    \end{lstlisting}
+    
+% Problem 3
+    \section{Code Snippet 2}
+    \begin{flushleft}
+        Write RISC-V assembly code for placing the following immediate constants in
+        register s7. Use a minimum number of instructions.
+    \end{flushleft}
+    % a:
+    \text{a)}
+    \begin{lstlisting}[language=RISCV]
+        addi s7, x0, 45 # s7 = 45
+    \end{lstlisting}
+    % b:
+    \text{b)}
+    \begin{lstlisting}[language=RISCV]
+        addi s7, x0, -199 # s7 = -199
+    \end{lstlisting}
+    % c:
+    \text{c)}
+    \begin{lstlisting}[language=RISCV]
+        lui s7, 0xFEDCC # Load the upper 20 bits of the immediate into s7
+        addi s7, s7, 0x8AB # Add the lower bits of the immediate to s7
+    \end{lstlisting}
+    % d:
+    \text{d)}
+    \begin{lstlisting}[language=RISCV]
+        lui s7, 0xAABCD # Load the upper 20 bits of the immediate into s7
+        addi s7, s7, 0x325 # Add the lower bits of the immediate to s7
+    \end{lstlisting}
+
+    \newpage
+    % Problem 4
+    \section{Code Snippet 3}
+    \begin{flushleft}
+        Convert the following high-level code into RISC-V assembly language. Assume
+        that the signed integer variables g and h are in registers t0 and t1, respectively
+    \end{flushleft}
+    \text{a)}
+    \begin{lstlisting}[language=RISCV]
+    if:
+        bge t1, t0, else # t1 >= t0
+        addi t0, t0, 9 # t0 = t0 + 9
+        slli t2, t0, 2 # t2 = t0 * 4
+        srai t3, t0, 1 # t3 = t0 / 2
+        add t0, t2, t3 # t0 = t0 * 5
+        j end
+    else:
+        addi t1, t1, -5 # t1 = t1 - 5
+        srai t1, t1, 3 # t1 = t1 / 8
+    \end{lstlisting}
+
+    \text{b)}
+    \begin{lstlisting}[language=RISCV]
+    if2:
+        blt t1, t0, else2 # t1 < t0
+        slli t2, t1, 1 # t2 = t1 * 2
+        add t1, t2, t1 # t1 = t1 * 3
+        add t0, t1, t0 # t0 = t0 + t1
+        andi t0, t0, 15 # t0 = t0 & 15
+        j end2 # jump to end
+    else2:
+        slli t0, t0, 1 # t0 = t0 * 2
+        sub t0, t0, t1 # t0 = t0 - t1 
+        slli t2, t1, 3 # t2 = t1 * 8
+        slli t3, t1, 2 # t3 = t1 * 4
+        add t1, t2, t3 # t1 = t1 * 12
+    end2:
+        \end{lstlisting}
+    % Problem 5
+    \newpage
+    \section{Code Snippet 4}
+    \begin{flushleft}
+        Convert the following high-level code into RISC-V assembly language. Assume
+        that the signed integer variables g and h are in registers t0 and t1, respectively. You can
+        use other temporary registers like t2 and t3 if needed.        
+    \end{flushleft}
+    \text{a)}
+    \begin{lstlisting}[language=RISCV]
+        andi t2, t0, 15 # t2 = t0 % 16
+        if:
+            addi t3, x0, 9 # t3 = 9
+            beq t2, t3, then # if t2 == t3
+            addi t3, x0, 12 # t3 = 12
+            beq t2, t3, then # if t2 == t3
+            j else
+        then:
+            srai t1, t1, 1 # t1 = t1 / 2
+            sub t1, t0, t1 # t1 = t0 - t1
+            slli t2, t1, 1 # t2 = t1 * 2
+            srai t3, t1, 1 # t3 = t1 / 2
+            add t0, t2, t3 # t1 = t2 + t3
+            add t0, t0, t1 # t0 = t0 + t1
+            j end
+        else:
+            srai t2, t1, 1
+            add t1, t1, t2
+            add t1, t0, t1
+            andi t0, t0, 7
+        end:
+    \end{lstlisting}
+
+    \text{b)}
+    \begin{lstlisting}[language=RISCV]
+        andi t3, t0, 31 # t3 = t0 % 32
+        if2:
+            addi t2, x0, 6 # t2 = 6 
+            bge t2, t3, else2 # if t2 >= t3
+            addi t2, x0, 17 # t2 = 17
+            bge t2, t3, else2  # if t2 >= t3
+            slli t2, t1, 2 # t2 = t1 * 4
+            slli t3, t1, 1 # t3 = t1 * 2
+            add t1, t2, t3 # t1 = t1 * 7
+            add t1, t0, t1 # t1 = t1 + t0
+            andi t0, t0, 3 # t0 = t0 % 4
+            j end2
+        else2:
+            slli t2, t1, 3 # t2 = t1 * 8
+            srai t3, t1, 1 # t3 = t1 / 2
+            sub t1, t2, t3 # t1 = t2 - t3
+            add t1, t0, t1 # t1 = t1 + t0
+            slli t2, t1, 3 # t2 = t1 * 8
+            sub t1, t2, t1 # t1 = t2 - t1
+        end2:
+        
+    \end{lstlisting}
+
+    % Problem 6
+    \newpage
+    \section{Code Snippet 5}
+    \begin{flushleft}
+        Comment on each snippet with what the snippet does. Assume that there is an
+        array, int arr [6] = {3, 1, 4, 1, 5, 9}, which starts at memory address
+        0xBFFFFF00. You may assume each integer is stored in 4 bytes. Register a0 contains
+        arr's address 0xBFFFFF00.
+    \end{flushleft}
+    \text{a)}
+    \begin{lstlisting}[language=RISCV]
+        # The code snippet takes the second and third element of the array 'arr' and adds them together.
+        # It then stores the result in the first element of the array 'arr'.
+
+        lw t0, 4(a0) # Load the value stored at the address 4(a0) into t0. This is the second element of the array.
+        lw t1, 8(a0) # Load the value stored at the address 8(a0) into t1. This is the third element of the array.
+        add t2, t0, t1 # Add t0 and t1 and store the result in t2
+        sw t2, 0(a0) # Store the value at register t2 at the address 0(a0). This is the first element of the array.
+    \end{lstlisting}
+
+    \text{b)}
+    \begin{lstlisting}[language=RISCV]
+        # This code snippet implements a loop that iterates six times (the number of elements in the 'arr' array). 
+        # During each iteration, it negates the value of the current element in the array.
+
+            addi t0, a0, 0 # Initialize t0 to the start of the array
+            addi t1, a0, 24 # Initialize t1 to the end of the array
+        loop: beq t0, t1, end # If t0 == t1, end the loop
+            lw t2, 0(t0) # Load the value stored at the address stores in t0 into t2
+            sub t2, x0, t2 # Negate t2
+            sw t4, 0(t0) # Store the value in t4 at the address 0(t0)
+            addi t0, t0, 4 # Increment t0 by 4
+            j loop # Jump to the loop label
+        end:
+    \end{lstlisting}
+
+    % Problem 7
+    \newpage
+    \section{Code Snippet 5}
+    \begin{flushleft}
+        Write a RISC-V assembly snippet code to find the length of a string. Assume
+        that the base address of string str is held in register a0. You may assume that each
+        character is stored in 1 byte. You can use temporary registers if needed.
+    \end{flushleft}
+    \text{a)}
+    \begin{lstlisting}[language=RISCV]
+        # Function:
+        # t0 = pointer to array
+        # t1 = current character
+        # t2 = length of string
+        add t0, x0, a0 # t0 = a0
+        while: 
+            lbu t1, 0(t0) # t1 = *t0
+            beq t1, x0, end # if t1 == 0, goto end
+            addi t0, t0, 1 # t0++
+            j while # goto while
+        end: 
+            sub t2, t0, a0 # t2 = t0 - a0
+    \end{lstlisting}
+
+\end{document}

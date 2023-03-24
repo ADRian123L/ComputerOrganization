@@ -20,9 +20,12 @@ main:
     addi s7, s7, 0x289
 
     # Problem 4
+    lui s7, 0x11237
+    addi s7, s7, 0xBDF
+
     lui s7, 0x11236
-    lui s6, 0xBDF
-    srli s5, s6, 12
+    addi s7, s6, 0xBDF
+    
     add s7, s7, s5
 
     # End

@@ -4,10 +4,12 @@
     ],
     "cSpell.words": [
         "addi",
+        "andi",
         "ecall",
         "globl",
         "slli",
         "slti",
-        "srai"
+        "srai",
+        "xori"
     ]
 }

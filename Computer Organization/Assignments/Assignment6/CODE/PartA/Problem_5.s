@@ -4,8 +4,8 @@
 .globl main
 
 .data
-g: .word 1
-h: .word 0
+g: .word 4
+h: .word 3
 
 .text
 main:
@@ -20,13 +20,13 @@ main:
         beq t3, t2, true # if t3 is equal to 3, go to true
         addi t2, zero, 5 # set t2 to 5
         beq t3, t2, true # if t3 is equal to 5, go to true
-        jal else
+        j else
     true:
         slli t2, t1, 2 # multiply t1 by 4
         srai t3, t1, 1 # divide t2 by 4
         add t3, t3, t2 # add t3 and t2
         add t1, t1, t3 # add t1 and t3
-        jal end
+        j end
     else:
         srai t3, t1, 4 # divide t1 by 16
         slli t3, t3, 4 # multiply t3 by 16

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  24 MAR 2023 19:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  24 MAR 2023 19:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -529,7 +529,7 @@ Package rerunfilecheck Warning: File `AdrianLozada-module4-assignment1.out' has 
 
 Package rerunfilecheck Info: Checksums for `AdrianLozada-module4-assignment1.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  DD0620FBA92EF627658CEDE8E29CE826;769.
+(rerunfilecheck)             After:  C844CD52BA21C79A20D954C2647C1EA5;769.
  ) 
 Here is how much of TeX's memory you used:
  15477 strings out of 478268

@@ -1,7 +1,7 @@
 .globl main
 
 .data
-array: .asciiz "Hello World"
+array: .asciiz "123456789"
 
 .text
 main:

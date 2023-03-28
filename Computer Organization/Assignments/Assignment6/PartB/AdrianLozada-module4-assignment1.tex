@@ -204,8 +204,8 @@
     \end{flushleft}
     \text{a)}
     \begin{lstlisting}[language=RISCV]
-        # The code snippet takes the second and third element of the array 'arr' and adds them together.
-        # It then stores the result in the first element of the array 'arr'.
+        # The code snippet takes the second (0xBFFFFF04) and third element (0xBFFFFF08) of the array 'arr' and adds them together.
+        # It then stores the result in the first element of the array 'arr' (0xBFFFFF00).
 
         lw t0, 4(a0) # Load the value stored at the address 4(a0) into t0. This is the second element of the array.
         lw t1, 8(a0) # Load the value stored at the address 8(a0) into t1. This is the third element of the array.

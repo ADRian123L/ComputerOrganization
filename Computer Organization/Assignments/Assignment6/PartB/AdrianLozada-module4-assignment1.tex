@@ -149,6 +149,7 @@
         if:
             addi t3, x0, 9 # t3 = 9
             beq t2, t3, then # if t2 == t3
+            andi t2, t2, 7 # t2 = t2 % 8
             addi t3, x0, 12 # t3 = 12
             beq t2, t3, then # if t2 == t3
             j else

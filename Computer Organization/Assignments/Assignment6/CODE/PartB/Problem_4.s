@@ -1,6 +1,10 @@
-
 .globl main
 
+.data
+g: .word 0
+h: .word 0
+
+.text
 main:
 # a)
     # g = t0

@@ -175,7 +175,7 @@
             addi t2, x0, 6 # t2 = 6 
             bge t2, t3, else2 # if t2 >= t3
             addi t2, x0, 17 # t2 = 17
-            bge t3, t2, else2  # if t2 >= t3
+            bge t3, t2, else2  # if t3 >= t2
             slli t2, t1, 2 # t2 = t1 * 4
             slli t3, t1, 1 # t3 = t1 * 2
             add t1, t2, t3 # t1 = t1 * 7

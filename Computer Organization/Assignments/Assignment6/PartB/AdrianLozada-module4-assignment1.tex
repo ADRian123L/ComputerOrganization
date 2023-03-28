@@ -158,8 +158,7 @@
             sub t1, t0, t1 # t1 = t0 - t1
             slli t2, t1, 1 # t2 = t1 * 2
             srai t3, t1, 1 # t3 = t1 / 2
-            add t0, t2, t3 # t1 = t2 + t3
-            add t0, t0, t1 # t0 = t0 + t1
+            add t1, t2, t3 # t1 = t2 + t3
             j end
         else:
             srai t2, t1, 1 # t2 = t1 / 2

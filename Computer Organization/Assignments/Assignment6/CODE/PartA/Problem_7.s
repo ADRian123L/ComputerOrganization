@@ -42,4 +42,5 @@ main:
         jal for # Go to the for loop
         end:
         # End of the function
+        addi a7, zero, 10 # Exit the program
         ecall

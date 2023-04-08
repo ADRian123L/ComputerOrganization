@@ -1,0 +1,273 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{minted}
+
+\lstdefinelanguage{RISCV}{
+  morekeywords={add, addi, addiw, addw, and, andi, auipc, beq, bge, bgeu, blt, bltu, bne, div, divu, divuw, divw, ecall, eret, fence, fence_i, jal, jalr, lb, lbu, ld, lh, lhu, lui, lw, lwu, mul, mulh, mulhsu, mulhu, mulw, or, ori, rem, remu, remuw, remw, ret, sb, sd, sh, sll, slli, slliw, sllw, slt, slti, sltiu, sltu, sra, srai, sraiw, sraw, srl, srli, srliw, srlw, sub, subw, sw, xor, xori},
+  morecomment=[l]{\#},
+  morecomment=[s]{/*}{*/},
+  morekeywords=[2]{x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20, x21, x22, x23, x24, x25, x26, x27, x28, x29, x30, x31},
+  morekeywords=[3]{a0, a1, a2, a3, a4, a5, a6, a7},
+  morekeywords=[4]{t0, t1, t2, t3, t4, t5, t6},
+  morekeywords=[5]{s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11},
+  keywordstyle=\color{cyan}, 
+  keywordstyle=[2]\color{yellow},
+  keywordstyle=[3]\color{orange},
+  keywordstyle=[4]\color{red},
+  keywordstyle=[5]\color{red},
+}
+
+\lstset{
+  language=RISCV,
+  basicstyle=\ttfamily\color{white},
+  keywordstyle=\color{cyan},
+  commentstyle=\color{green},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2,
+  backgroundcolor=\color[HTML]{1e1e1e}, % Dark background color
+  rulecolor=\color{gray},
+  numbersep=8pt,
+}
+
+\title{Assignment 7, Part A}
+\author{Adrian Lozada}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+% Problem 1
+    \section{}
+    Independent
+
+% Problem 2
+\section{}
+    \begin{flushleft}
+        Write a RISC-V assembly function to search a specified integer in an integer
+        array. The function should take the base address of the array, the number of elements in
+        the array, and the specified integer as function arguments. The function should return the
+        index number of the first array entry that holds the specified value. If no array element is the
+        specified value, it should return the value -1.
+    \end{flushleft}
+    \begin{lstlisting}[language=RISCV]
+# a0 is is the base of the array.
+# a1 is the number of elements in the array.
+# a2 is the number that the function searches for.
+
+# The function returns the index in a0 (if found), otherwise -1.
+
+find_int:
+        addi t0, x0, 1 # t0 is 1.
+        if: 
+            blt a1, t0, return_1 # If size < 1 return -1
+        add t0, a0, x0 # t0 is a pointer to a0.
+        slli t3, a1, 2 # t3 is the size of the array in bytes.
+        add t1 a0, t3 # t1 is a pointer to the last element of the array.
+                
+        loop:
+            blt t1, t0, return_1 # t1 < t0
+            lw t2, 0(t0) # t2 = *t0
+            if_equal:
+                    beq t2, a2, return_found # If t2 == a2 return the index.
+            addi t0, t0, 4 # t0++
+            jal x0, loop
+                
+        return_found:
+                    sub a0, t0, a0 # Calculate the index.
+                    srai a0, a0, 2
+                    jalr x0, x1, 0
+        return_1:
+                addi a0, x0, -1 # Return -1.
+                jalr x0, x1, 0
+    \end{lstlisting}
+    
+% Problem 3
+    \section{}
+    \begin{flushleft}
+        Consider a RISC-V assembly function func1. func1 has three passing
+        arguments stored in registers a0, a1 and a2, uses temporary registers t0-t3 and
+        saved registers s4-s10. func1 needs to call func2 and other functions may call func1
+        also. func2 has two passing arguments stored in registers a0 and a1, respectively. In
+        func1, after the program returns to func1 from func2, the code needs the original
+        values stored in registers t1 and a0 before it calls func2.
+    \end{flushleft}
+    % a:
+    \textbf{a.}
+    \text{Ten words need to be stored in the stack.}
+    \textbf{b.}
+    \text{Funct1 needs to store the values inside a0, t1, s4-s10, ra in the stack.} 
+    
+    \newpage
+    % Problem 4
+    \section{}
+    \begin{flushleft}
+        Implement the C code snippet in RISC-V assembly language. Use s0-s2 to hold the variables
+        i, j, and min_idx in the fucntion selectionSort. Be sure to hangle the stack pointer
+        appropriatly. The array is stored on the stack of the selectionSort function. Clearly 
+        comment your code.
+    \end{flushleft}
+    \text{a)}
+    \begin{lstlisting}[language=RISCV]
+        # selectionSort takes a0 (base address) and a1 (number of elements).
+        selectionSort:
+                        # s0 is i
+                        # s1 is j
+                        # s2 is min_idx
+                        # s4 is a0
+                        # s5 is a1
+                        # s6 si a1 - 1 (size)
+                        # s7 is min_idx
+
+                        # Save the s registers into the stack:
+                        addi sp, sp, -32
+                        sw s0, 0(sp)
+                        sw s1, 4(sp)
+                        sw s2, 8(sp)
+                        sw s3, 12(sp)
+                        sw s4, 16(sp)
+                        sw s5, 20(sp)
+                        sw s6, 24(sp)
+                        sw x1, 28(sp)
+
+                        # Store a0 and a1:
+                        add s4, a0, x0
+                        add s5, a1, x0
+            
+                        # Sort the array:
+                        addi s6, a1, -1 # n - 1 
+                        add s0, x0, x0 # i = 0
+                        for:
+                            bge s0, s6, end_loop # i > n
+
+                            # Call findMinimum function:
+                            slli t0, s0, 2
+                            add a0, s4, t0
+                            sub a1, s5, s0
+                            jal x1, findMinimum
+
+                            # Set min_idx to the value in a0:
+                            add s2, a0, x0
+
+                            if_swap:
+                                beq s2, s0, continue
+                                # Call the swap function:
+                                add t0, s2, s0
+                                slli t0, t0, 2
+                                add a0, s4, t0
+                                slli t0, s0, 2
+                                add a1, s4, t0
+                                jal x1, swap
+
+                            continue:
+
+                            # Increment i:
+                            addi s0, s0, 1
+
+                            # Jump to Loop:
+                            jal x0, for 
+
+                        end_loop:
+
+                        # Restore the s registers:
+                        lw s0, 0(sp)
+                        lw s1, 4(sp)
+                        lw s2, 8(sp)
+                        lw s3, 12(sp)
+                        lw s4, 16(sp)
+                        lw s5, 20(sp)
+                        lw s6, 24(sp)
+                        lw x1, 28(sp)
+
+                        # Empty the stack:
+                        addi sp, sp, 32
+
+                        # Return:
+                        jalr x0, x1, 0
+
+
+        # findMinimum takes a0 (base address) and a1 (number of elements).
+        findMinimum:
+                    # t0 is min_idx
+                    # t1 is min_E
+
+                    # Initialize min_idx and min_E:
+                    add t0, x0, x0
+                    add t2, a0, t0
+                    lw t1, 0(t2)
+
+                    # Loop through the array:
+                    # t3 is i
+                    addi t3, x0, 1
+                    for_loop_2:
+                        # Condition:
+                        bge t3, a1, end_loop_2
+                        # Body:
+                        slli t4, t3, 2
+                        add t4, a0, t4
+                        # t5 = arr[i]
+                        lw t5, 0(t4)
+                        if_2:
+                            bge t5, t1, continue_2
+                            add t0, t3, x0
+                            slli t6, t0, 2
+                            add t6, a0, t6
+                            lw t1, 0(t6)
+
+                        continue_2:
+                        
+                        # Increment i:
+                        addi t3, t3, 1
+
+                        # Jump to Loop:
+                        jal x0, for_loop_2
+                    
+                    end_loop_2:
+                    # Return min_idx:
+                    add a0, t0, x0
+                    # Return:
+                    jalr x0, x1, 0
+
+        # swap takes a0 (address of first element) and a1 (address of second element).
+        swap:
+                # t0 is temp
+                # t1 is a0
+		
+                # Interchange the values:
+                lw t0, 0(a0) # temp = a0
+                lw t1, 0(a1) # a0 = a1 
+                sw t1, 0(a0)
+                sw t0, 0(a1)
+	
+                # Return:
+                jalr x0, x1, 0
+    \end{lstlisting}
+
+    % Problem 5
+    \newpage
+    \section{}
+    \begin{flushleft}
+        Assume that the selectionSort is the function called. Draw the status of
+        the stack before calling selectionSort and during each function call. Indicate stack
+        addresses and names of registers and variables stored on the stack; mark the location
+        of sp; and clearly mark each stack frame. Assume the sp starts at 0x8000.
+    \end{flushleft}
+    \text{a)}
+    \begin{lstlisting}[language=RISCV]
+    \end{lstlisting}
+
+\end{document}

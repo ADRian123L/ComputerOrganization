@@ -10,6 +10,7 @@
 \usepackage{xcolor}
 \usepackage{color}
 \usepackage{minted}
+\usepackage{arydshln}
 
 \lstdefinelanguage{RISCV}{
   morekeywords={add, addi, addiw, addw, and, andi, auipc, beq, bge, bgeu, blt, bltu, bne, div, divu, divuw, divw, ecall, eret, fence, fence_i, jal, jalr, lb, lbu, ld, lh, lhu, lui, lw, lwu, mul, mulh, mulhsu, mulhu, mulw, or, ori, rem, remu, remuw, remw, ret, sb, sd, sh, sll, slli, slliw, sllw, slt, slti, sltiu, sltu, sra, srai, sraiw, sraw, srl, srli, srliw, srlw, sub, subw, sw, xor, xori},
@@ -131,18 +132,17 @@ find_int:
                         # s4 is a0
                         # s5 is a1
                         # s6 si a1 - 1 (size)
-                        # s7 is min_idx
+                        
 
                         # Save the s registers into the stack:
-                        addi sp, sp, -32
+                        addi sp, sp, -28
                         sw s0, 0(sp)
                         sw s1, 4(sp)
                         sw s2, 8(sp)
-                        sw s3, 12(sp)
-                        sw s4, 16(sp)
-                        sw s5, 20(sp)
-                        sw s6, 24(sp)
-                        sw x1, 28(sp)
+                        sw s4, 12(sp)
+                        sw s5, 16(sp)
+                        sw s6, 20(sp)
+                        sw x1, 24(sp)
 
                         # Store a0 and a1:
                         add s4, a0, x0
@@ -187,14 +187,13 @@ find_int:
                         lw s0, 0(sp)
                         lw s1, 4(sp)
                         lw s2, 8(sp)
-                        lw s3, 12(sp)
-                        lw s4, 16(sp)
-                        lw s5, 20(sp)
-                        lw s6, 24(sp)
-                        lw x1, 28(sp)
+                        lw s4, 12(sp)
+                        lw s5, 16(sp)
+                        lw s6, 20(sp)
+                        lw x1, 24(sp)
 
                         # Empty the stack:
-                        addi sp, sp, 32
+                        addi sp, sp, 28
 
                         # Return:
                         jalr x0, x1, 0
@@ -259,15 +258,27 @@ find_int:
 
     % Problem 5
     \newpage
-    \section{}
+    \text{b)}
     \begin{flushleft}
         Assume that the selectionSort is the function called. Draw the status of
         the stack before calling selectionSort and during each function call. Indicate stack
         addresses and names of registers and variables stored on the stack; mark the location
         of sp; and clearly mark each stack frame. Assume the sp starts at 0x8000.
     \end{flushleft}
-    \text{a)}
-    \begin{lstlisting}[language=RISCV]
-    \end{lstlisting}
-
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            $Addresses$ & $Registers$ & $Variables$ & $Stack\_Pointer$ \\
+            \hline
+            \hline
+            0x8000 & $s0$ & $i$ &\\
+            0x7FFC & $s1$ & $j$ &\\
+            0x7FF8 & $s2$ & $min\_idx$ &\\
+            0x7FF0 & $s4$ & $arr$ &\\
+            0x7FEC & $s5$ & $n$ & \\
+            0x7FE8 & $s6$ & $n - 1$ & $$\\
+            \hdashline 0x7FE0 & $x1$ & $ra$ & $sp$\\
+            \hline
+        \end{tabular}
+    \end{center}
 \end{document}

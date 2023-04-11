@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  7 APR 2023 21:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  11 APR 2023 12:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -387,61 +387,85 @@ See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.13 
-     
+l.13 \usepackage
+                {arydshln}
 Pass the -shell-escape flag to LaTeX. Refer to the minted.sty documentation for more information.
 
+(/usr/local/texlive/2022/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2019/02/21 v1.76 
+\dashlinedash=\dimen183
+\dashlinegap=\dimen184
+\adl@box=\box63
+\adl@height=\dimen185
+\adl@heightsave=\dimen186
+\adl@depth=\dimen187
+\adl@depthsave=\dimen188
+\adl@finaldepth=\dimen189
+\adl@columns=\count323
+\adl@ncol=\count324
+\adl@currentcolumn=\count325
+\adl@currentcolumnsave=\count326
+\adl@totalheight=\count327
+\adl@totalheightsave=\count328
+\adl@dash=\count329
+\adl@gap=\count330
+\adl@cla=\count331
+\adl@clb=\count332
+\adl@everyvbox=\toks30
+\adl@LTpagetotal=\dimen190
+)
 runsystem(which pygmentize && touch AdrianLozada-module4-2.aex)...disabled (restricted).
 
 
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:49: Package minted Error: You must have `pygmentize' installed to use this package.
+
+/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:50: Package minted Error: You must have `pygmentize' installed to use this package.
 
 See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.49 \begin{document}
+l.50 \begin{document}
                      
 Refer to the installation instructions in the minted documentation for more information.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count323
-\l__pdf_internal_box=\box63
+\l__color_backend_stack_int=\count333
+\l__pdf_internal_box=\box64
 ) (./AdrianLozada-module4-2.aux)
 \openout1 = `AdrianLozada-module4-2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count324
-\scratchdimen=\dimen183
-\scratchbox=\box64
-\nofMPsegments=\count325
-\nofMParguments=\count326
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count327
-\MPscratchDim=\dimen184
-\MPnumerator=\count328
-\makeMPintoPDFobject=\count329
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count334
+\scratchdimen=\dimen191
+\scratchbox=\box65
+\nofMPsegments=\count335
+\nofMParguments=\count336
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count337
+\MPscratchDim=\dimen192
+\MPnumerator=\count338
+\makeMPintoPDFobject=\count339
+\everyMPtoPDFconversion=\toks32
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -482,7 +506,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 50.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -490,81 +514,81 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count330
+\c@section@level=\count340
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 50.
+LaTeX Info: Redefining \pageref on input line 50.
+LaTeX Info: Redefining \nameref on input line 50.
 \@outlinefile=\write5
 \openout5 = `AdrianLozada-module4-2.out'.
 
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-\c@lstlisting=\count331
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
+\c@lstlisting=\count341
+LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (132.7172pt too wide) in paragraph at lines 110--114
+Overfull \hbox (132.7172pt too wide) in paragraph at lines 111--115
 \OT1/cmr/bx/n/12 a. [] b. [] 
  []
 
 [3]
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:120: Missing $ inserted.
+/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:121: Missing $ inserted.
 <inserted text> 
                 $
-l.120         i, j, and min_
+l.121         i, j, and min_
                             idx in the fucntion selectionSort. Be sure to ha...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:123: LaTeX Error: Command \end{flushleft} invalid in math mode.
+/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:124: LaTeX Error: Command \end{flushleft} invalid in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.123     \end{flushleft}
+l.124     \end{flushleft}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:123: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:124: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.123     \end{flushleft}
+l.124     \end{flushleft}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:123: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:124: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.123     \end{flushleft}
+l.124     \end{flushleft}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:123: Missing $ inserted.
+/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:124: Missing $ inserted.
 <inserted text> 
                 $
-l.123     \end{flushleft}
+l.124     \end{flushleft}
                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -573,7 +597,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (423.14337pt too wide) in paragraph at lines 119--125
+Overfull \hbox (423.14337pt too wide) in paragraph at lines 120--126
 \OT1/cmr/m/n/12 i, j, and min$[]\OML/cmm/m/it/12 dxinthefucntionselectionSort:Besuretohanglethestackpointerappropriatly:ThearrayisstoredonthestackoftheselectionSortfunction:Clearlycommentyourcode:$
  []
 
@@ -585,21 +609,21 @@ Package rerunfilecheck Warning: File `AdrianLozada-module4-2.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `AdrianLozada-module4-2.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  0C445C11D55D2836D41884682AE0087C;175.
+(rerunfilecheck)             After:  E41E9EC76E06A704C6361735357EF817;140.
  ) 
 Here is how much of TeX's memory you used:
- 15512 strings out of 478268
- 253781 string characters out of 5846347
- 716744 words of memory out of 5000000
- 33350 multiletter control sequences out of 15000+600000
+ 15728 strings out of 478268
+ 256979 string characters out of 5846347
+ 719426 words of memory out of 5000000
+ 33566 multiletter control sequences out of 15000+600000
  477884 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,6n,67p,530b,1919s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on AdrianLozada-module4-2.pdf (8 pages, 103337 bytes).
+ 61i,12n,67p,530b,1919s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on AdrianLozada-module4-2.pdf (8 pages, 112960 bytes).
 PDF statistics:
  284 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
- 178 named destinations out of 1000 (max. 500000)
+ 255 compressed objects within 3 object streams
+ 174 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

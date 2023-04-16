@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  16 APR 2023 12:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  16 APR 2023 12:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -535,68 +535,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:121: Missing $ inserted.
-<inserted text> 
-                $
-l.121         i, j, and min_
-                            idx in the fucntion selectionSort. Be sure to ha...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:124: LaTeX Error: Command \end{flushleft} invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.124     \end{flushleft}
-                         
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:124: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.124     \end{flushleft}
-                         
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:124: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.124     \end{flushleft}
-                         
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex:124: Missing $ inserted.
-<inserted text> 
-                $
-l.124     \end{flushleft}
-                         
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (423.14337pt too wide) in paragraph at lines 120--126
-\OT1/cmr/m/n/12 i, j, and min$[]\OML/cmm/m/it/12 dxinthefucntionselectionSort:Besuretohanglethestackpointerappropriatly:ThearrayisstoredonthestackoftheselectionSortfunction:Clearlycommentyourcode:$
- []
-
-[4] [5] [6] [7] [8] (./AdrianLozada-module4-2.aux)
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] [8] (./AdrianLozada-module4-2.aux)
 
 Package rerunfilecheck Warning: File `AdrianLozada-module4-2.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
@@ -613,12 +552,12 @@ Here is how much of TeX's memory you used:
  33566 multiletter control sequences out of 15000+600000
  477884 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,12n,67p,530b,1919s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on AdrianLozada-module4-2.pdf (8 pages, 105529 bytes).
+ 61i,12n,67p,530b,1917s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on AdrianLozada-module4-2.pdf (8 pages, 95271 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
- 254 compressed objects within 3 object streams
+ 276 PDF objects out of 1000 (max. 8388607)
+ 251 compressed objects within 3 object streams
  175 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

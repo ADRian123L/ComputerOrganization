@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1681662561 "/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex" "AdrianLozada-module4-2.pdf" "AdrianLozada-module4-2" 1681662561
-  "/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex" 1681662560 10314 60f143286c4240300207878319c7f4b1 ""
+["pdflatex"] 1681663156 "/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex" "AdrianLozada-module4-2.pdf" "AdrianLozada-module4-2" 1681663156
+  "/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex" 1681663150 10239 5ae90a3516171f63fea62b8b2c31b1c5 ""
   "/dev/null" 0 -1 0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -24,7 +24,6 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1136768653 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
-  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
@@ -110,9 +109,9 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1674704598 2826445 17e6d19166ec93d1a7546f8ac3ac3cf7 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "AdrianLozada-module4-2.aux" 1681662561 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "AdrianLozada-module4-2.aux" 1681663156 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   "AdrianLozada-module4-2.out" 0 -1 0 "pdflatex"
-  "AdrianLozada-module4-2.tex" 1681662560 10314 60f143286c4240300207878319c7f4b1 ""
+  "AdrianLozada-module4-2.tex" 1681663150 10239 5ae90a3516171f63fea62b8b2c31b1c5 ""
   (generated)
   "AdrianLozada-module4-2.aux"
   "AdrianLozada-module4-2.log"

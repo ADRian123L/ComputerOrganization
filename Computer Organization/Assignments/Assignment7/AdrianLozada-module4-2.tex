@@ -267,17 +267,17 @@ find_int:
         of sp; and clearly mark each stack frame. Assume the sp starts at 0x8000.
     \end{flushleft}
     \begin{center}
-        \begin{tabular}{|c|c|c|c|}
+        \begin{tabular}{|c|c|c|}
             \hline
-            $Addresses$ & $Registers$ & $Variables$ & $Stack\_Pointer$ \\
+            $Addresses$ & $Registers$ & $Stack\_Pointer$ \\
             \hline
             \hline
-            0x8000 & $s0$ & $i$ &\\
-            0x7FFC & $s1$ & $min\_idx$ &\\
-            0x7FF8 & $s2$ & $arr$ &\\
-            0x7FF4 & $s3$ & $n$ & \\
-            0x7FF0 & $s4$ & $n - 1$ & $$\\
-            \hdashline 0x7FEC & $x1$ & $ra$ & $sp$\\
+            0x8000 & $s0$ & \\
+            0x7FFC & $s1$ & \\
+            0x7FF8 & $s2$ & \\
+            0x7FF4 & $s3$ &  \\
+            0x7FF0 & $s4$ & \\
+            \hdashline 0x7FEC & $x1$ & $sp$\\
             \hline
         \end{tabular}
     \end{center}

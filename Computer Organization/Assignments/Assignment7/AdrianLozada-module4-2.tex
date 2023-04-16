@@ -266,29 +266,29 @@ find_int:
     \end{flushleft}
     \text{Before calling selectionSort:}
     \begin{center}
-        \begin{tabular}{|c|c|c|c|}
+        \begin{tabular}{|c|c|c|c|c|}
             \hline
-            $Addresses$ & $Registers$ & $Stack\_Pointer$ & $Stack\_Frame$ \\
+            $Addresses$ & $Registers$ & $Stack\_Pointer$ & $Variables$ & $Stack\_Frame$ \\
             \hline
             \hline
-            0x8000 & $$ & $SP$ & $*$\\
+            0x8000 & $???$ & $SP$ & $???$ & $*$\\
             \hline
         \end{tabular}
     \end{center}
     \text{During the first call to selectionSort:}
     \begin{center}
-        \begin{tabular}{|c|c|c|c|}
+        \begin{tabular}{|c|c|c|c|c|}
             \hline
-            $Addresses$ & $Registers$ & $Stack\_Pointer$ & $Stack\_Frame$ \\
+            $Addresses$ & $Registers$ & $Stack\_Pointer$ & $Variables$ & $Stack\_Frame$ \\
             \hline
             \hline
-            0x8000 & $$ & $$ & $$ \\
-            \hdashline 0x7FFC & $s0$ & $$ & $*$ \\
-            0x7FF8 & $s1$ &  $$ &$*$\\
-            0x7FF4 & $s2$ &  $$ &$*$\\
-            0x7FF0 & $s3$ &  $$ &$*$\\
-            0x7FEC & $s4$ &  $$ &$*$\\
-            0x7FEC & $x1$ & $SP$ & $*$\\
+            0x8000 & $???$ & $$ & $???$ &$$ \\
+            \hdashline 0x7FFC & $s0$ & $$ & $???$& $*$ \\
+            0x7FF8 & $s1$ &  $$ & $???$&$*$\\
+            0x7FF4 & $s2$ &  $$ & $???$&$*$\\
+            0x7FF0 & $s3$ &  $$ & $???$&$*$\\
+            0x7FEC & $s4$ &  $$ & $???$&$*$\\
+            0x7FEC & $x1$ & $SP$ & $???$& $*$\\
             \hline
         \end{tabular}
     \end{center}

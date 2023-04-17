@@ -79,7 +79,7 @@ main:
                         sw s2, 8(sp)
                         sw s3, 12(sp)
                         sw s4, 16(sp)
-                        sw x1, 20(sp)
+                        sw ra, 20(sp)
 
                         # Store a0 and a1:
                         add s2, a0, zero
@@ -127,7 +127,7 @@ main:
                         lw s2, 8(sp)
                         lw s3, 12(sp)
                         lw s4, 16(sp)
-                        lw x1, 20(sp)
+                        lw ra, 20(sp)
 
                         # Empty the stack:
                         addi sp, sp, 24 
@@ -162,7 +162,7 @@ main:
 
                         if_2:
                             bge t5, t1, continue_2  # array[i] >= min_E goto continue_2  
-                            add t0, t3, x0 # min_idx = i
+                            add t0, t3, zero # min_idx = i
                             slli t6, t0, 2 # min_idx * 4
                             add t6, a0, t6
                             lw t1, 0(t6) # t1 == array[i]

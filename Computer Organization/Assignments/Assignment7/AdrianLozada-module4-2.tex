@@ -275,7 +275,10 @@ find_int:
             \hline
         \end{tabular}
     \end{center}
-    \text{During the first call to selectionSort:}
+    \begin{flushleft}
+        During the first call to selectionSort. The stack remains the same for each iteration in the loop. Hence, for findMinimum and swap,
+        the stack remains the same.
+    \end{flushleft}
     \begin{center}
         \begin{tabular}{|c|c|c|c|c|}
             \hline
@@ -283,12 +286,23 @@ find_int:
             \hline
             \hline
             0x8000 & $???$ & $$ & $???$ &$$ \\
-            \hdashline 0x7FFC & $s0$ & $$ & $???$& $*$ \\
-            0x7FF8 & $s1$ &  $$ & $???$&$*$\\
-            0x7FF4 & $s2$ &  $$ & $???$&$*$\\
-            0x7FF0 & $s3$ &  $$ & $???$&$*$\\
-            0x7FEC & $s4$ &  $$ & $???$&$*$\\
-            0x7FEC & $x1$ & $SP$ & $???$& $*$\\
+            \hdashline 0x7FFC & $ra$ & $$ & $???$& $selectionSort$ \\
+            0x7FF8 & $s4$ &  $$ & $???$&$selectionSort$\\
+            0x7FF4 & $s3$ &  $$ & $???$&$selectionSort$\\
+            0x7FF0 & $s2$ &  $$ & $???$&$selectionSort$\\
+            0x7FEC & $s1$ &  $$ & $???$&$selectionSort$\\
+            0x7FE8 & $s0$ & $SP$ & $???$& $selectionSort$\\
+            \hline
+        \end{tabular}
+    \end{center}
+    \text{After calling selectionSort:}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            $Addresses$ & $Registers$ & $Stack\_Pointer$ & $Variables$ & $Stack\_Frame$ \\
+            \hline
+            \hline
+            0x8000 & $???$ & $SP$ & $???$ & $*$\\
             \hline
         \end{tabular}
     \end{center}

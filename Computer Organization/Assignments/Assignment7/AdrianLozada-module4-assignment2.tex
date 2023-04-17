@@ -73,10 +73,10 @@
 # The function returns the index in a0 (if found), otherwise -1.
 
 find_int:
-        addi t0, x0, 1 # t0 is 1.
+        addi t0, zero, 1 # t0 is 1.
         if: 
             blt a1, t0, return_1 # If size < 1 return -1
-        add t0, a0, x0 # t0 is a pointer to a0.
+        add t0, a0, zero # t0 is a pointer to a0.
         slli t3, a1, 2 # t3 is the size of the array in bytes.
         add t1 a0, t3 # t1 is a pointer to the last element of the array.
                 
@@ -86,15 +86,15 @@ find_int:
             if_equal:
                     beq t2, a2, return_found # If t2 == a2 return the index.
             addi t0, t0, 4 # t0++
-            jal x0, loop
+            jal zero, loop
                 
         return_found:
                     sub a0, t0, a0 # Calculate the index.
                     srai a0, a0, 2
-                    jalr x0, x1, 0
+                    jalr zero, ra, 0
         return_1:
-                addi a0, x0, -1 # Return -1.
-                jalr x0, x1, 0
+                addi a0, zero, -1 # Return -1.
+                jalr zero, ra, 0
     \end{lstlisting}
     
 % Problem 3

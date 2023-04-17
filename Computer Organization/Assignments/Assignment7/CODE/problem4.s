@@ -82,12 +82,12 @@ main:
                         sw x1, 20(sp)
 
                         # Store a0 and a1:
-                        add s2, a0, x0
-                        add s3, a1, x0
+                        add s2, a0, zero
+                        add s3, a1, zero 
             
                         # Sort the array:
                         addi s4, a1, -1 # pass n - 1 
-                        add s0, x0, x0 # i = 0
+                        add s0, zero, zero # i = 0
                         for:
                             bge s0, s4, end_loop # i >= n - 1 goto end_loop
 
@@ -95,13 +95,13 @@ main:
                             slli t0, s0, 2 # i * 4  
                             add a0, s2, t0 # pass &array[i] to a0
                             sub a1, s3, s0 # pass n - i 
-                            jal x1, findMinimum
+                            jal ra, findMinimum
 
                             # Set min_idx to the value in a0:
-                            add s1, a0, x0 
+                            add s1, a0, zero 
 
                             if_swap:
-                                beq s1, x0, continue # min_idx == 0 goto continue
+                                beq s1, zero, continue # min_idx == 0 goto continue
 
                                 # Call the swap function:
                                 add t0, s1, s0 # t0 = min_idx + i
@@ -109,7 +109,7 @@ main:
                                 add a0, s2, t0 # a0 = &array[min_idx + i]
                                 slli t0, s0, 2 # i * 4
                                 add a1, s2, t0 # a1 = &array[i]
-                                jal x1, swap # Call swap
+                                jal zero, swap # Call swap
 
                             continue:
 
@@ -117,7 +117,7 @@ main:
                             addi s0, s0, 1
 
                             # Jump to Loop:
-                            jal x0, for
+                            jal zero, for
 
                         end_loop:
 
@@ -133,7 +133,7 @@ main:
                         addi sp, sp, 24 
 
                         # Return:
-                        jalr x0, x1, 0
+                        jalr zero, ra, 0
 
         # findMinimum takes a0 (base address) and a1 (number of elements).
         findMinimum:
@@ -141,15 +141,14 @@ main:
                     # t1 is min_E
 
                     # Initialize min_idx and min_E:
-                    add t0, x0, x0 # min_idx = 0
-                    slli t3, t0, 2 # min_idx * 4
-                    add t2, a0, t3 # (a0 + min_idx * 4) 
+                    add t0, zero, zero # min_idx = 0
+                    add t2, a0, t0 # (a0 + min_idx) 
                     lw t1, 0(t2) # t1 = array[a0 + min_idx * 4]
 
                     # Loop through the array:
 
                     # t3 is i
-                    addi t3, x0, 1
+                    addi t3, zero, 1
 
                     for_loop_2:
                         # Condition:
@@ -174,13 +173,13 @@ main:
                         addi t3, t3, 1
 
                         # Jump to Loop:
-                        jal x0, for_loop_2
+                        jal zero, for_loop_2
                     
                     end_loop_2:
                     # Return min_idx:
-                    add a0, t0, x0
+                    add a0, t0, zero 
                     # Return:
-                    jalr x0, x1, 0
+                    jalr zero, ra, 0
 
         # swap takes a0 (address of first element) and a1 (address of second element).
         swap:
@@ -194,4 +193,4 @@ main:
                 sw t0, 0(a1) # *a1 = temp
 	
                 # Return:
-                jalr x0, x1, 0
+                jalr zero, ra, 0

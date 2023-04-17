@@ -2,8 +2,8 @@ PWD /Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organiza
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-2.tex
-OUTPUT AdrianLozada-module4-2.log
+INPUT /Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-assignment2.tex
+OUTPUT AdrianLozada-module4-assignment2.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -705,10 +705,10 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.de
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./AdrianLozada-module4-2.aux
-INPUT AdrianLozada-module4-2.aux
-INPUT AdrianLozada-module4-2.aux
-OUTPUT AdrianLozada-module4-2.aux
+INPUT ./AdrianLozada-module4-assignment2.aux
+INPUT AdrianLozada-module4-assignment2.aux
+INPUT AdrianLozada-module4-assignment2.aux
+OUTPUT AdrianLozada-module4-assignment2.aux
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -765,8 +765,8 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestri
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-OUTPUT AdrianLozada-module4-2.out
-OUTPUT AdrianLozada-module4-2.pdf
+OUTPUT AdrianLozada-module4-assignment2.out
+OUTPUT AdrianLozada-module4-assignment2.pdf
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
@@ -820,9 +820,9 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT AdrianLozada-module4-2.aux
-INPUT ./AdrianLozada-module4-2.out
-INPUT ./AdrianLozada-module4-2.out
+INPUT AdrianLozada-module4-assignment2.aux
+INPUT ./AdrianLozada-module4-assignment2.out
+INPUT ./AdrianLozada-module4-assignment2.out
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb

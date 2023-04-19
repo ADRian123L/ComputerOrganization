@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  17 APR 2023 12:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  18 APR 2023 21:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-assignment2.tex"
-(/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-assignment2.tex
+**"/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-assignment-II.tex"
+(/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-assignment-II.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -377,11 +377,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks29
 \c@listing=\count322
 )
-runsystem(mkdir -p _minted-AdrianLozada-module4-assignment2)...disabled (restricted).
+runsystem(mkdir -p _minted-AdrianLozada-module4-assignment-II)...disabled (restricted).
 
 
 
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-assignment2.tex:13: Package minted Error: You must invoke LaTeX with the -shell-escape flag.
+/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-assignment-II.tex:13: Package minted Error: You must invoke LaTeX with the -shell-escape flag.
 
 See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -414,11 +414,11 @@ Package: arydshln 2019/02/21 v1.76
 \adl@everyvbox=\toks30
 \adl@LTpagetotal=\dimen190
 )
-runsystem(which pygmentize && touch AdrianLozada-module4-assignment2.aex)...disabled (restricted).
+runsystem(which pygmentize && touch AdrianLozada-module4-assignment-II.aex)...disabled (restricted).
 
 
 
-/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-assignment2.tex:50: Package minted Error: You must have `pygmentize' installed to use this package.
+/Users/adrianlozada/Desktop/USF/USF_4/ComputerOrganization/Computer Organization/Assignments/Assignment7/AdrianLozada-module4-assignment-II.tex:50: Package minted Error: You must have `pygmentize' installed to use this package.
 
 See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -432,8 +432,8 @@ Refer to the installation instructions in the minted documentation for more info
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count333
 \l__pdf_internal_box=\box64
-) (./AdrianLozada-module4-assignment2.aux)
-\openout1 = `AdrianLozada-module4-assignment2.aux'.
+) (./AdrianLozada-module4-assignment-II.aux)
+\openout1 = `AdrianLozada-module4-assignment-II.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
@@ -520,7 +520,7 @@ LaTeX Info: Redefining \ref on input line 50.
 LaTeX Info: Redefining \pageref on input line 50.
 LaTeX Info: Redefining \nameref on input line 50.
 \@outlinefile=\write5
-\openout5 = `AdrianLozada-module4-assignment2.out'.
+\openout5 = `AdrianLozada-module4-assignment-II.out'.
 
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
@@ -535,26 +535,26 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] [8] (./AdrianLozada-module4-assignment2.aux)
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] [8] (./AdrianLozada-module4-assignment-II.aux)
 
-Package rerunfilecheck Warning: File `AdrianLozada-module4-assignment2.out' has changed.
+Package rerunfilecheck Warning: File `AdrianLozada-module4-assignment-II.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: Checksums for `AdrianLozada-module4-assignment2.out':
+Package rerunfilecheck Info: Checksums for `AdrianLozada-module4-assignment-II.out':
 (rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  E41E9EC76E06A704C6361735357EF817;140.
  ) 
 Here is how much of TeX's memory you used:
  15732 strings out of 478268
- 257198 string characters out of 5846347
- 719566 words of memory out of 5000000
+ 257236 string characters out of 5846347
+ 719588 words of memory out of 5000000
  33570 multiletter control sequences out of 15000+600000
  477884 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,12n,67p,547b,1917s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 61i,12n,67p,549b,1917s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on AdrianLozada-module4-assignment2.pdf (8 pages, 105683 bytes).
+Output written on AdrianLozada-module4-assignment-II.pdf (8 pages, 105683 bytes).
 PDF statistics:
  279 PDF objects out of 1000 (max. 8388607)
  252 compressed objects within 3 object streams
